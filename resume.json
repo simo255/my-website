@@ -68,7 +68,8 @@
         "Implemented game mechanics such as attacks and movements in Unreal Engine 5.2, using Blueprint for rapid prototyping.",
         "Developed a health and cheat system in C++, enhancing game stability and enriching UX.",
         "Designed a generic detection system with Octree in C++, using Geometric Tools to improve performance and game fluidity."
-      ]
+      ],
+      "link": "https://www.ign.com/games/the-bird-that-drinks-tears"
     },
     {
       "employer": "Ludia - Jamcity Company",
@@ -82,7 +83,8 @@
         "Optimized the user interface of the game Jurassic World The Game in C++, significantly increasing satisfaction for over 20M users with visual and functional improvements.",
         "Worked closely with artists and designers to integrate new gameplay features, with a technical design document for each.",
         "Developed a dynamic button in C++, Json, and VBA, providing designers the flexibility to adjust the UI in real-time, improving UX."
-      ]
+      ], 
+      "link": "https://play.google.com/store/apps/details?id=com.ludia.jurassicworld"
     },
     {
       "employer": "AG-Connect - IMMOSQUARE",
@@ -95,7 +97,8 @@
       "responsibilities": [
         "Managed a team of 10 animators, scheduling and training new members.",
         "Supervised the work methods of animators, ensuring effective management of resources and activities."
-      ]
+      ], 
+      "link": "https://ag-connect.com/"
     },
     {
       "role": "Host of virtual and in-person general assemblies",
@@ -107,7 +110,8 @@
       "responsibilities": [
         "Directed over 200 general assemblies with more than 100 co-owners, explaining platform functionalities to participants for smooth proceedings.",
         "Collaborated with lawyers to optimize voting processes, improving the efficiency of general assemblies."
-      ]
+      ], 
+      "link": "https://ag-connect.com/"
     }
   ],
   "projects": [
@@ -120,7 +124,6 @@
       ],
       "description": "Created a website that displays my resume and projects, with a responsive design.",
       "type": "Personal Project",
-      "link": "https://github.com/simo255/thisWebsite"
     },
     {
       "title": "betteResume, chrome extension",
@@ -141,7 +144,7 @@
       ],
       "description": "Created a telegram bot that engage with users and provide cryptocurrency related information.",
       "type": "Personal Project",
-      "link": "https://github.com/simo255/telegramBot"
+      "link": "private"
     },
     {
       "title": "Data Visualization in Python",
@@ -163,7 +166,7 @@
       ],
       "description": "Designed and developed custom ROMs and kernels for Huawei P9 lite and Honor 5C, using C++, C, and Shell. This project led to significant performance and customization improvements for over 1,000 users.",
       "type": "XDA-Developers",
-      "link": "https://github.com/simo255/CustomROMs"
+      "link": "https://linktr.ee/simo255"
     },
     {
       "title": "Scrabble: Cross-platform Web and Android App",
