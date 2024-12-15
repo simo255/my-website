@@ -9,6 +9,8 @@ export class ResumeService {
   constructor(private http: HttpClient) {}
 
   getResume(): Observable<any> {
-    return this.http.get('resume.json'); 
+    const url = "https://raw.githubusercontent.com/simo255/my_website/gh-pages/resume.json";
+
+    return this.http.get(url);
   }
 }
