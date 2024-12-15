@@ -116,19 +116,70 @@ $button-color: #5A9BD5; /* Muted blue for buttons */
     box-sizing: border-box; 
   }
   
-  .grid-item {
-    background-color: #2C3E50;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid $secondary-color;
-    transition: all 0.3s ease;
-    
+ .grid-item {
+  background-color: #2C3E50;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid $secondary-color;
+  position: relative; 
+  transition: all 0.3s ease;
+  text-align: center; 
+
+  &:hover {
+    background-color: $highlight-color;
+    border-color: $primary-color;
+    transform: translateY(-5px);
+  }
+  .project-link {
+    display: none; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $primary-color;
+    color: $text-color;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
     &:hover {
-      background-color: $highlight-color;
-      border-color: $primary-color;
-      transform: translateY(-5px);
+      background-color: $hover-color;
     }
   }
+
+  &:hover .project-link {
+    display: block;
+  }
+  .experience-link {
+    display: none; /* Hidden by default */
+    position: absolute; /* Center positioning */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $primary-color;
+    color: $text-color;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+
+  &:hover .experience-link {
+    display: block; /* Show on hover */
+  }
+}
+
   
   .grid-item h3 {
     font-size: em;
