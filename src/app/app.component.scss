@@ -1,0 +1,187 @@
+$primary-color: #4A90E2; /* Soft blue */
+$secondary-color: #A1C6EA; /* Light blue */
+$accent-color: #C8E0F4; /* Very light blue */
+$highlight-color: #1C6FB0; /* Deep blue for emphasis */
+$background-color: #1A1A2E; /* Dark background */
+$text-color: #E0E0E0; /* Soft white */
+$hover-color: #6AB7FF; /* Lighter blue for hover */
+$button-color: #5A9BD5; /* Muted blue for buttons */
+
+
+.self-introduction {
+    background-color: #333333;
+    color: $text-color;
+    padding: 40px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .self-introduction h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+  
+  .self-introduction p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: $text-color;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+.app-container {
+    padding: 40px;
+    font-family: 'Roboto', sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    min-height: 100vh;
+  }
+  
+  .card {
+    background-color: #232B43; 
+    margin-bottom: 30px;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid $highlight-color;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  .profile-card {
+    background-color: #2A3555; 
+    text-align: center;
+    padding: 50px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+  }
+  
+  .profile-card h1 {
+    font-size: 3em;
+    margin: 0;
+    color: $primary-color;
+  }
+  
+  .profile-card p {
+    color: $secondary-color;
+  }
+  
+  .profile-card .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-card .contact a {
+    color: $primary-color;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+  
+  .profile-card .contact a:hover {
+    color: $hover-color;
+  }
+  
+  .contact-icon {
+    margin-right: 8px;
+  }
+  
+  
+
+  .section-header {
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    color: $primary-color;
+  }
+  
+
+  .content.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 10px 0;
+  }
+  
+  .grid-item {
+    background-color: #2C3E50;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid $secondary-color;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: $highlight-color;
+      border-color: $primary-color;
+      transform: translateY(-5px);
+    }
+  }
+  
+  .grid-item h3 {
+    font-size: 2em;
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+  
+  .grid-item p {
+    color: $text-color;
+  }
+  
+  .grid-item ul {
+    padding-left: 20px;
+    list-style-type: square;
+  }
+  
+  .grid-item li {
+    color: $text-color;
+    margin-bottom: 5px;
+  }
+  
+
+  .footer {
+    background-color: #232B43;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 8px;
+  }
+  
+  .footer .contact-link {
+    color: $primary-color;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+  
+  .footer .contact-link:hover {
+    color: $hover-color;
+  }
+  
+
+  @media (max-width: 768px) {
+    .app-container {
+      padding: 20px;
+    }
+  
+    .profile-card {
+      padding: 30px;
+    }
+  
+    .section-header {
+      font-size: 1.5em;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }

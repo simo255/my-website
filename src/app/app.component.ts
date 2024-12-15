@@ -1,12 +1,30 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common'; 
+import { ResumeService } from './services/resume.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [CommonModule], 
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'my_website';
+export class AppComponent implements OnInit {
+ constructor(private resumeService: ResumeService) {
+ }
+ resumeData: any; 
+ isLoading = true;
+
+ ngOnInit(): void {
+
+  this.resumeService.getResume().subscribe(
+    (data) => {
+      this.resumeData = data; 
+      this.isLoading = false; 
+    },
+    (error) => {
+      console.error('Error fetching resume data', error); 
+      this.isLoading = false; 
+    }
+  );
+}
 }
