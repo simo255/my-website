@@ -123,8 +123,8 @@
         "SCSS"
       ],
       "description": "Created a website that displays my resume and projects, with a responsive design.",
-      "type": "Personal Project",
-    }
+      "type": "Personal Project"
+    },
     {
       "title": "betteResume, chrome extension",
       "technologies": [
