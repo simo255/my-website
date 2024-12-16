@@ -12,18 +12,15 @@ export class AppComponent implements OnInit {
  constructor(private resumeService: ResumeService) {
  }
  resumeData: any; 
- isLoading = true;
 
  ngOnInit(): void {
 
   this.resumeService.getResume().subscribe(
     (data) => {
       this.resumeData = data; 
-      this.isLoading = false; 
     },
     (error) => {
       console.error('Error fetching resume data', error); 
-      this.isLoading = false; 
     }
   );
 }

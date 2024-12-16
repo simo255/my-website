@@ -1,16 +1,16 @@
-/* Color Variables (Blue Themed) */
-$primary-color: #4A90E2; /* Soft blue */
-$secondary-color: #A1C6EA; /* Light blue */
-$accent-color: #C8E0F4; /* Very light blue */
-$highlight-color: #1C6FB0; /* Deep blue for emphasis */
-$background-color: #1A1A2E; /* Dark background */
-$text-color: #E0E0E0; /* Soft white */
-$hover-color: #6AB7FF; /* Lighter blue for hover */
-$button-color: #5A9BD5; /* Muted blue for buttons */
+$primary-color: #4682F3;
+$secondary-color: #77A8FF;
+$accent-color: #B3D4FF;
+$highlight-color: #2C72D2;
+$background-color: #E8F1FC;
+$text-color: #1E293B;
+$hover-color: #5A92FF;
+$button-color: #3B84F6;
+
+
 
 
 .self-introduction {
-    background-color: #333333;
     color: $text-color;
     padding: 40px;
     text-align: center;
@@ -40,11 +40,14 @@ $button-color: #5A9BD5; /* Muted blue for buttons */
     background-color: $background-color;
     color: $text-color;
     min-height: 100vh;
-    box-sizing: border-box; 
+    box-sizing: border-box;
   }
   
   .card {
-    background-color: #232B43; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     margin-bottom: 30px;
     border-radius: 12px;
     padding: 30px;
@@ -59,8 +62,7 @@ $button-color: #5A9BD5; /* Muted blue for buttons */
   }
   
   .profile-card {
-    background-color: #2A3555; 
-    text-align: center;
+      text-align: center;
     padding: 50px;
     border-radius: 12px;
     margin-bottom: 40px;
@@ -98,12 +100,18 @@ $button-color: #5A9BD5; /* Muted blue for buttons */
     margin-right: 8px;
   }
   
-  
+  .logo {
+    max-width: 10rem;
+  }
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 
   .section-header {
     margin-bottom: 20px;
     font-size: 2em;
-    font-weight: bold;
     color: $primary-color;
   }
   
@@ -117,7 +125,6 @@ $button-color: #5A9BD5; /* Muted blue for buttons */
   }
   
  .grid-item {
-  background-color: #2C3E50;
   padding: 20px;
   border-radius: 10px;
   border: 2px solid $secondary-color;
@@ -126,7 +133,7 @@ $button-color: #5A9BD5; /* Muted blue for buttons */
   text-align: center; 
 
   &:hover {
-    background-color: $highlight-color;
+    background-color: $accent-color;
     border-color: $primary-color;
     transform: translateY(-5px);
   }
@@ -159,7 +166,7 @@ $button-color: #5A9BD5; /* Muted blue for buttons */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: $primary-color;
+    background-color: $accent-color;
     color: $text-color;
     text-decoration: none;
     padding: 10px 20px;
@@ -203,7 +210,6 @@ $button-color: #5A9BD5; /* Muted blue for buttons */
   
 
   .footer {
-    background-color: #232B43;
     padding: 15px;
     text-align: center;
     margin-top: 40px;
@@ -214,12 +220,18 @@ $button-color: #5A9BD5; /* Muted blue for buttons */
     color: $primary-color;
     text-decoration: none;
     font-size: 1.2em;
+    margin: 0 10px; 
     transition: color 0.3s;
+  }
+  
+  .footer .contact-link i {
+    margin-right: 5px; 
   }
   
   .footer .contact-link:hover {
     color: $hover-color;
   }
+  
   
 
   @media (max-width: 768px) {
