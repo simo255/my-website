@@ -1,0 +1,205 @@
+{
+  "profile": {
+    "name": "Mohamed Waridi Bennouna",
+    "location": "Montreal",
+    "contact": {
+      "email": "00bmed255@gmail.com",
+      "github": "https://github.com/simo255",
+      "linkedin": "https://www.linkedin.com/in/mwaridibennouna/",
+      "website": "https://simo255.github.io/my_website/"
+    }
+  },
+  "education": {
+    "university": "Polytechnique Montréal",
+    "degree": "Bachelor of Software Engineering",
+    "location": "Montreal",
+    "specializations": [
+      "Full Stack Development",
+      "Cyber-Security", 
+      "OSINT"
+    ],
+    "dates": {
+      "start": "September 2020",
+      "end": "May 2024"
+    }, 
+    "logo": "/images/polymtl.png"
+  },
+  "experience": [
+    {
+      "employer": "Environment Canada and Climate Change",
+      "role": "Developer",
+      "location": "Montreal",
+      "dates": {
+        "start": "June 2024",
+        "end": "Present"
+      },
+      "responsibilities": [
+        "Develop Power Platform & Dynamics 365 applications, translating business requirements into technical solutions",
+        "Submitted a pull request that resolved a critical bug in an open source plugin used by the team.",
+        "Implemented a powershell script to check security settings changes and integrated it in Azure DevOps pipeline.",
+        "Performed Fortify scans to detect, generate reports and fix security vulnerabilities in code.",
+        "Integrated code components and custom code in Javascript using React Framework into model-driven apps.",
+        "Developed an app that makes new employees on-boarding easier using Power Apps and Power Automate."
+      ],
+      "logo": "/images/GoC.png",
+      "link": "https://www.ec.gc.ca/"
+    },
+    {
+      "employer": "Eduplan Solutions",
+      "role": "Full-Stack Developer - Contractor",
+      "location": "Montreal",
+      "dates": {
+        "start": "January 2024",
+        "end": "May 2024"
+      },
+      "responsibilities": [
+        "Developed a web application that generates educational plans using AI with the Mistral LLM, including file and sub-folder management to enhance educational organization.",
+        "Implemented the REST API with FastApi and PostgreSQL in Python, optimizing data management and security, and hosted it with AWS EC2 (Linux/Ubuntu).",
+        "Designed the user interface, also mobile-friendly, with Angular and Node.js, based on Figma designs with HTML and SCSS.",
+        "Established CI/CD pipelines, speeding up deployment cycles and managed tasks on Gitlab Issues within an Agile methodology."
+      ],
+      "link": "https://www.matara.solutions/",
+      "logo": "/images/eduplan.png"
+    },
+    {
+      "employer": "Krafton Montreal Studio",
+      "role": "Gameplay Developer C++ - Internship",
+      "location": "Montreal",
+      "dates": {
+        "start": "May 2023",
+        "end": "August 2023"
+      },
+      "responsibilities": [
+        "Contributed to the initial design of the AAA game 'The Bird That Drinks Tears', in an Agile environment and using Jira for task management.",
+        "Implemented game mechanics such as attacks and movements in Unreal Engine 5.2, using Blueprint for rapid prototyping.",
+        "Developed a health and cheat system in C++, enhancing game stability and enriching UX.",
+        "Designed a generic detection system with Octree in C++, using Geometric Tools to improve performance and game fluidity."
+      ],
+      "logo": "/images/Krafton.png",
+      "link": "https://www.ign.com/games/the-bird-that-drinks-tears"
+    },
+    {
+      "employer": "Ludia - Jamcity Company",
+      "role": "Video Game Developer C++ - Internship",
+      "location": "Montreal",
+      "dates": {
+        "start": "May 2022",
+        "end": "August 2022"
+      },
+      "responsibilities": [
+        "Optimized the user interface of the game Jurassic World The Game in C++, significantly increasing satisfaction for over 20M users with visual and functional improvements.",
+        "Worked closely with artists and designers to integrate new gameplay features, with a technical design document for each.",
+        "Developed a dynamic button in C++, Json, and VBA, providing designers the flexibility to adjust the UI in real-time, improving UX."
+      ], 
+      "link": "https://play.google.com/store/apps/details?id=com.ludia.jurassicworld",
+      "logo": "/images/ludia.png"
+    },
+    {
+      "employer": "AG-Connect - IMMOSQUARE",
+      "role": "Team Leader of Animators",
+      "location": "Montreal",
+      "dates": {
+        "start": "August 2023",
+        "end": "January 2024"
+      },
+      "responsibilities": [
+        "Managed a team of 10 animators, scheduling and training new members.",
+        "Supervised the work methods of animators, ensuring effective management of resources and activities."
+      ], 
+      "link": "https://ag-connect.com/"
+    },
+    {
+      "role": "Host of virtual and in-person general assemblies",
+      "location": "Montreal",
+      "dates": {
+        "start": "November 2021",
+        "end": "Present"
+      },
+      "responsibilities": [
+        "Directed over 200 general assemblies with more than 100 co-owners, explaining platform functionalities to participants for smooth proceedings.",
+        "Collaborated with lawyers to optimize voting processes, improving the efficiency of general assemblies."
+      ], 
+      "link": "https://ag-connect.com/"
+    }
+  ],
+  "projects": [
+    {
+      "title": "This website",
+      "technologies": [
+        "Angular",
+        "HTML",
+        "SCSS"
+      ],
+      "description": "Created a website that displays my resume and projects.",
+      "type": "Personal Project"
+    },
+    {
+      "title": "betteResume",
+      "technologies": [
+        "Javascript",
+        "HTML",
+        "CSS"
+      ],
+      "description": "Created a chrome extension that allows users to create an ai generated resume in a few clicks, using your own api key for each LLM (Mistral /Gemini, and ability to open it in overleaf for more customization).",
+      "type": "Personal Project",
+      "link": "https://github.com/simo255/betteResume",
+      "logo": "/images/betteresume.png"
+    },
+    {
+      "title": "Telegram Bot in python",
+      "technologies": [
+        "Python",
+        "azure VM"
+      ],
+      "description": "Created a telegram bot that engage with users and provide cryptocurrency related information.",
+      "type": "Private"
+    },
+    {
+      "title": "Data Visualization in Python",
+      "technologies": [
+        "Panda",
+        "Plotly",
+        "FastApi",
+        "Github"
+      ],
+      "description": "Developed a website in Javascript and FastApi that displays individual and overall team statistics for the Ivory Coast football team during AFCON 2023, with Plotly and using data from fbref.com.",
+      "type": "Sports AI"
+    },
+    {
+      "title": "Creation of Custom Android ROMs",
+      "technologies": [
+        "Github",
+        "Android SDK & ADB",
+        "Visual Studio Code"
+      ],
+      "description": "Designed and developed custom ROMs and kernels for Huawei P9 lite and Honor 5C, using C++, C, and Shell. This project led to significant performance and customization improvements for over 1,000 users.",
+      "type": "XDA-Developers",
+      "link": "https://linktr.ee/simo255"
+    },
+    {
+      "title": "Scrabble: Cross-platform Web and Android App",
+      "technologies": [
+        "Angular",
+        "Kotlin",
+        "Node.JS",
+        "Gitlab"
+      ],
+      "description": "Developed a cross-platform Scrabble web app, in a multi-service architecture, as part of a team of 5. Implemented the Express server with the Socket.IO library and designed user profiles with Firebase and Firestore.",
+      "type": "University Project 2 and 3"
+    }
+  ],
+  "skills": {
+    "languages": [
+      "Java",
+      "MongoDB",
+      "Figma",
+      "JavaScript",
+      "Jira"
+    ],
+    "interests": [
+      "Ping-Pong",
+      "Financial markets/stocks",
+      "Crypto & Blockchain"
+    ]
+  }
+}
