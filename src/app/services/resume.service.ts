@@ -9,7 +9,7 @@ export class ResumeService {
   constructor(private http: HttpClient) {}
 
   getResume(): Observable<any> {
-    const url = 'resume.json';
+    const url = 'assets/resume.json';
     return this.http.get(url);
   }
 }

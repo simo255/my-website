@@ -22,7 +22,7 @@
       "start": "September 2020",
       "end": "May 2024"
     }, 
-    "logo": "/images/polymtl.png"
+    "logo": "assets/images/polymtl.png"
   },
   "experience": [
     {
@@ -41,7 +41,7 @@
         "Integrated code components and custom code in Javascript using React Framework into model-driven apps.",
         "Developed an app that makes new employees on-boarding easier using Power Apps and Power Automate."
       ],
-      "logo": "/images/GoC.png",
+      "logo": "assets/images/GoC.png",
       "link": "https://www.ec.gc.ca/"
     },
     {
@@ -59,7 +59,7 @@
         "Established CI/CD pipelines, speeding up deployment cycles and managed tasks on Gitlab Issues within an Agile methodology."
       ],
       "link": "https://www.matara.solutions/",
-      "logo": "/images/eduplan.png"
+      "logo": "assets/images/eduplan.png"
     },
     {
       "employer": "Krafton Montreal Studio",
@@ -75,7 +75,7 @@
         "Developed a health and cheat system in C++, enhancing game stability and enriching UX.",
         "Designed a generic detection system with Octree in C++, using Geometric Tools to improve performance and game fluidity."
       ],
-      "logo": "/images/Krafton.png",
+      "logo": "assets/images/Krafton.png",
       "link": "https://www.ign.com/games/the-bird-that-drinks-tears"
     },
     {
@@ -92,7 +92,7 @@
         "Developed a dynamic button in C++, Json, and VBA, providing designers the flexibility to adjust the UI in real-time, improving UX."
       ], 
       "link": "https://play.google.com/store/apps/details?id=com.ludia.jurassicworld",
-      "logo": "/images/ludia.png"
+      "logo": "assets/images/ludia.png"
     },
     {
       "employer": "AG-Connect - IMMOSQUARE",
@@ -143,7 +143,7 @@
       "description": "Created a chrome extension that allows users to create an ai generated resume in a few clicks, using your own api key for each LLM (Mistral /Gemini, and ability to open it in overleaf for more customization).",
       "type": "Personal Project",
       "link": "https://github.com/simo255/betteResume",
-      "logo": "/images/betteresume.png"
+      "logo": "assets/images/betteresume.png"
     },
     {
       "title": "Telegram Bot in python",
