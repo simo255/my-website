@@ -8,6 +8,8 @@ $text-color: #1E293B;
 $hover-color: #5A92FF;
 $hover-color: #5A92FF;
 
+@import "../../../styles.scss";
+
 // Blog List Styles
 .blogs-list {
   display: flex;
@@ -93,7 +95,9 @@ $hover-color: #5A92FF;
 }
 
 // Markdown Body Styles
+// Use global font family
 .markdown-body {
+  font-family: $font-family-base;
   a {
     color: $highlight-color;
     text-decoration: underline;
@@ -109,7 +113,7 @@ $hover-color: #5A92FF;
     color: $text-color;
     border-radius: 6px;
     padding: 0.2em 0.5em;
-    font-family: 'Fira Mono', 'Consolas', monospace;
+    font-family: $font-family-mono;
     font-size: 1em;
   }
 
@@ -128,9 +132,10 @@ $hover-color: #5A92FF;
 }
 
 // Headings
+// Headings
 h2 {
   color: $primary-color;
   margin-left: 1rem;
-  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-family: $font-family-base;
 }
 

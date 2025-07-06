@@ -8,6 +8,8 @@ $text-color: #1E293B;
 $hover-color: #5A92FF;
 $hover-color: #5A92FF;
 
+@import "../../../styles.scss";
+
 .blog-detail-container {
   background: white;
   border-radius: 12px;
@@ -38,7 +40,7 @@ $hover-color: #5A92FF;
   color: $text-color;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(70, 130, 243, 0.08);
-  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  font-family: $font-family-base;
 
   h1, h2, h3, h4, h5, h6 {
     color: $primary-color;
@@ -68,12 +70,13 @@ $hover-color: #5A92FF;
     }
   }
 
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
   pre, code {
     background: $background-color;
     color: $text-color;
     border-radius: 6px;
     padding: 0.2em 0.5em;
-    font-family: 'Fira Mono', 'Consolas', monospace;
+    font-family: $font-family-mono;
   }
 
   pre {
