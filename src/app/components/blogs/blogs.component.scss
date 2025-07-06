@@ -6,61 +6,120 @@ $highlight-color: #2C72D2;
 $background-color: #E8F1FC;
 $text-color: #1E293B;
 $hover-color: #5A92FF;
+$hover-color: #5A92FF;
 
-.markdown-body {
+// Blog List Styles
+.blogs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+// Blog Card Styles
+.blog-card {
   background: white;
-  color: $text-color;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(70, 130, 243, 0.08);
   padding: 2rem;
-  margin-top: 2rem;
-  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
-  line-height: 1.7;
-  font-size: 1.1rem;
+  transition: box-shadow 0.2s;
+  
+  .blog-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  img.cover-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px rgba(44, 114, 210, 0.12);
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+  }
+
+  .blog-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h3 {
+    color: $primary-color;
+    margin: 0 0 0.5rem 0;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  p {
+    color: $text-color;
+    margin: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(70, 130, 243, 0.16);
+  }
 }
 
-.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
-  color: $primary-color;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
+// Responsive Styles
+@media (max-width: 768px) {
+  .blogs-list {
+    gap: 1rem;
+  }
+  .blog-card {
+    padding: 1rem;
+    
+    .blog-link {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    img.cover-img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+      margin-right: 0;
+    }
+  }
+  .markdown-body {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }
 
-.markdown-body p {
-  margin-bottom: 1.2em;
+// Markdown Body Styles
+.markdown-body {
+  a {
+    color: $highlight-color;
+    text-decoration: underline;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  pre, code {
+    background: $background-color;
+    color: $text-color;
+    border-radius: 6px;
+    padding: 0.2em 0.5em;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    font-size: 1em;
+  }
+
+  pre {
+    padding: 1em;
+    overflow-x: auto;
+  }
 }
 
-.markdown-body ul, .markdown-body ol {
-  margin-left: 2em;
-  margin-bottom: 1.2em;
-}
-
-.markdown-body li {
-  margin-bottom: 0.5em;
-}
-
-.markdown-body a {
-  color: $highlight-color;
-  text-decoration: underline;
-  transition: color 0.2s;
-}
-.markdown-body a:hover {
-  color: $hover-color;
-}
-
-.markdown-body pre, .markdown-body code {
-  background: $background-color;
-  color: $text-color;
-  border-radius: 6px;
-  padding: 0.2em 0.5em;
-  font-family: 'Fira Mono', 'Consolas', monospace;
-  font-size: 1em;
-}
-.markdown-body pre {
-  padding: 1em;
-  overflow-x: auto;
-}
-
+// Cover Image Utility
 .cover-img {
   max-width: 100%;
   border-radius: 10px;
@@ -68,9 +127,10 @@ $hover-color: #5A92FF;
   box-shadow: 0 2px 8px rgba(44, 114, 210, 0.12);
 }
 
-@media (max-width: 768px) {
-  .markdown-body {
-    padding: 1rem;
-    font-size: 1rem;
-  }
+// Headings
+h2 {
+  color: $primary-color;
+  margin-left: 1rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
 }
+

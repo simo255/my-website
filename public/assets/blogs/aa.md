@@ -1,11 +1,11 @@
 ---
-title: Getting Started with Angular
+title: Gsssssssssth Angular
 date: 2025-07-01
-coverImage: /assets/images/none.png
+coverImage: 
 tags: [Angular, Tutorial]
 ---
 
-## Installation
+# Installation
 To install Angular CLI, run:
 
 ```bash

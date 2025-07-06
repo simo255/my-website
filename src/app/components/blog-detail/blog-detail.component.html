@@ -1,10 +1,11 @@
-<div *ngIf="blog; else notFound">
-  <h1>{{ blog.title }}</h1>
-  <p>{{ blog.date }}</p>
-  <img [src]="blog.coverImage" *ngIf="blog.coverImage" class="cover-img" />
-
-  <markdown [data]="blog.content"></markdown>
-</div>
+<ng-container *ngIf="blog; else notFound">
+  <div class="blog-detail-container">
+    <h1 class="blog-title">{{ blog.title }}</h1>
+    <p class="blog-date">{{ blog.date | date }}</p>
+    <img [src]="blog.coverImage" *ngIf="blog.coverImage" class="cover-img" />
+    <markdown class="markdown-body" [data]="blog.content"></markdown>
+  </div>
+</ng-container>
 
 <ng-template #notFound>
   <p>Article not found.</p>

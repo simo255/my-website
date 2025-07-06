@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule, MarkdownModule],
   templateUrl: './blog-detail.component.html',
+  styleUrl: './blog-detail.component.scss'
+
 })
 export class BlogDetailComponent {
   blog?: Blog;

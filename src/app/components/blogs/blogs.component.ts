@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './blogs.component.html',
+  styleUrl: './blogs.component.scss'
+
 })
 export class BlogsComponent {
   blogs: Blog[] = [];
