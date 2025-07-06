@@ -1,0 +1,264 @@
+$primary-color: #4682F3;
+$secondary-color: #77A8FF;
+$accent-color: #B3D4FF;
+$highlight-color: #2C72D2;
+$background-color: #E8F1FC;
+$text-color: #1E293B;
+$hover-color: #5A92FF;
+$button-color: #3B84F6;
+
+
+
+
+.self-introduction {
+    color: $text-color;
+    padding: 40px;
+    text-align: center;
+    margin-top: 2vh;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .self-introduction h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+  
+  .self-introduction p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: $text-color;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .app-container {
+    padding: 2vw 20vw; 
+    font-family: 'Roboto', sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-bottom: 30px;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid $highlight-color;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  .profile-card {
+      text-align: center;
+    padding: 50px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+  }
+  
+  .profile-card h1 {
+    font-size: 3em;
+    margin: 0;
+    color: $primary-color;
+  }
+  
+  .profile-card p {
+    color: $secondary-color;
+  }
+  
+  .profile-card .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-card .contact a {
+    color: $primary-color;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+  
+  .profile-card .contact a:hover {
+    color: $hover-color;
+  }
+  
+  .contact-icon {
+    margin-right: 8px;
+  }
+  
+  .logo {
+    max-width: 10rem;
+  }
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .section-header {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: $primary-color;
+  }
+  
+
+  .content.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 10px;
+    box-sizing: border-box; 
+  }
+  
+ .grid-item {
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid $secondary-color;
+  position: relative; 
+  transition: all 0.3s ease;
+  text-align: center; 
+
+  &:hover {
+    background-color: $accent-color;
+    border-color: $primary-color;
+    transform: translateY(-5px);
+  }
+  .project-link {
+    display: none; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $primary-color;
+    color: $text-color;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+
+  &:hover .project-link {
+    display: block;
+  }
+  .experience-link {
+    display: none; /* Hidden by default */
+    position: absolute; /* Center positioning */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $accent-color;
+    color: $text-color;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+
+  &:hover .experience-link {
+    display: block; /* Show on hover */
+  }
+}
+
+  
+  .grid-item h3 {
+    font-size: em;
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+  
+  .grid-item p {
+    color: $text-color;
+  }
+  
+  .grid-item ul {
+
+    list-style-type: square;
+  }
+  
+  .grid-item li {
+    color: $text-color;
+    margin-bottom: 5px;
+  }
+  
+
+  .footer {
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 8px;
+  }
+  .footer p {
+    color: $primary-color;
+    font-size: 1em;
+  }
+  
+  .footer .contact-link {
+    color: $primary-color;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 10px; 
+    transition: color 0.3s;
+  }
+  
+  .footer .contact-link i {
+    margin-right: 5px; 
+  }
+  
+  .footer .contact-link:hover {
+    color: $hover-color;
+  }
+  
+  
+
+  @media (max-width: 768px) {
+    .app-container {
+        padding: 10px;
+        box-sizing: border-box;
+      }
+  
+    .profile-card {
+      padding: 30px;
+    }
+  
+    .section-header {
+      font-size: 1.5em;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    .content.grid {
+        grid-template-columns: 1fr;
+      }
+      .footer {
+        margin-bottom: 3vh;
+      }
+  }

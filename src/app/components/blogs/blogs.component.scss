@@ -1,0 +1,76 @@
+
+$primary-color: #4682F3;
+$secondary-color: #77A8FF;
+$accent-color: #B3D4FF;
+$highlight-color: #2C72D2;
+$background-color: #E8F1FC;
+$text-color: #1E293B;
+$hover-color: #5A92FF;
+
+.markdown-body {
+  background: white;
+  color: $text-color;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(70, 130, 243, 0.08);
+  padding: 2rem;
+  margin-top: 2rem;
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+  color: $primary-color;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.markdown-body p {
+  margin-bottom: 1.2em;
+}
+
+.markdown-body ul, .markdown-body ol {
+  margin-left: 2em;
+  margin-bottom: 1.2em;
+}
+
+.markdown-body li {
+  margin-bottom: 0.5em;
+}
+
+.markdown-body a {
+  color: $highlight-color;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.markdown-body a:hover {
+  color: $hover-color;
+}
+
+.markdown-body pre, .markdown-body code {
+  background: $background-color;
+  color: $text-color;
+  border-radius: 6px;
+  padding: 0.2em 0.5em;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 1em;
+}
+.markdown-body pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+.cover-img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(44, 114, 210, 0.12);
+}
+
+@media (max-width: 768px) {
+  .markdown-body {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
