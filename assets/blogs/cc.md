@@ -1,12 +1,9 @@
 ---
-title: Credit Cards in Canada: A Nightmare or a Dream?
+title: Credit Cards, a Nightmare or a Dream?
 date: 2025-07-06
-coverImage:     
-tags: [Finance, Credit Cards, Canada, Travel Hacking, Churning]
+coverImage: 
+tags: [AI, Society, Technology, Critical Thinking]
 ---
-
-# Credit Cards in Canada: A Nightmare or a Dream?
-
 Credit cards are one of those tools that can either mess up your finances completely or unlock a bunch of perks that feel almost too good to be true.
 
 I’ve seen both sides. I’ve made mistakes with them. I’ve also booked free flights and stayed in airport lounges I had no business being in. If you’re in Canada and want to understand how to actually use credit cards to your advantage, here’s what I’ve learned.
