@@ -6,7 +6,7 @@ import fm from 'front-matter';
 
 @Injectable({ providedIn: 'root' })
 export class BlogService {
-  private blogSlugs = ['credit-cards', 'ai-is-making-us-lazy']; // Add your slugs here
+  private blogSlugs = ['ai-is-making-us-lazy', 'cc'];
 
   constructor(private http: HttpClient) {}
 
@@ -26,10 +26,8 @@ export class BlogService {
       const markdown = await this.http
         .get(`assets/blogs/${slug}.md`, { responseType: 'text' })
         .toPromise();
-
       const parsed = fm(markdown || '');
-      const attributes = parsed.attributes as any;
-
+      const attributes = parsed.attributes as Blog
       return {
         title: attributes.title || 'Untitled',
         slug,
