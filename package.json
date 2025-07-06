@@ -8,7 +8,7 @@
     "build-gp": "ng build --base-href 'https://simo255.github.io/my-website/'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "npx angular-cli-ghpages --dir=dist/my_website/browser --no-silent"
+    "deploy": "npx angular-cli-ghpages --dir=dist/my-website/browser --no-silent"
   },
   "private": true,
   "dependencies": {
