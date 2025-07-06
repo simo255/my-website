@@ -6,7 +6,7 @@ import fm from 'front-matter';
 
 @Injectable({ providedIn: 'root' })
 export class BlogService {
-  private blogSlugs = ['ai-is-making-us-lazy', 'cc'];
+  private blogSlugs = ['ai-is-making-us-lazy', 'cc', 'investing-beginner'];
 
   constructor(private http: HttpClient) {}
 

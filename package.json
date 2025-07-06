@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-gp": "ng build --base-href 'https://simo255.github.io/my-website/'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "npx angular-cli-ghpages --dir=dist/my_website/browser --no-silent"
