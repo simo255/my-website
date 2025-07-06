@@ -6,7 +6,7 @@
       "email": "00bmed255@gmail.com",
       "github": "https://github.com/simo255",
       "linkedin": "https://www.linkedin.com/in/mwaridibennouna/",
-      "website": "https://simo255.github.io/my_website/"
+      "website": "https://simo255.github.io/my-website/"
     }
   },
   "education": {
@@ -14,14 +14,14 @@
     "degree": "Bachelor of Software Engineering",
     "location": "Montreal",
     "specializations": [
+      "Power Platform & Dynamics 365",
       "Full Stack Development",
-      "Cyber-Security", 
-      "OSINT"
+      "Cyber-Security"
     ],
     "dates": {
       "start": "September 2020",
       "end": "May 2024"
-    }, 
+    },
     "logo": "assets/images/polymtl.png"
   },
   "experience": [
@@ -90,7 +90,7 @@
         "Optimized the user interface of the game Jurassic World The Game in C++, significantly increasing satisfaction for over 20M users with visual and functional improvements.",
         "Worked closely with artists and designers to integrate new gameplay features, with a technical design document for each.",
         "Developed a dynamic button in C++, Json, and VBA, providing designers the flexibility to adjust the UI in real-time, improving UX."
-      ], 
+      ],
       "link": "https://play.google.com/store/apps/details?id=com.ludia.jurassicworld",
       "logo": "assets/images/ludia.png"
     },
@@ -105,7 +105,7 @@
       "responsibilities": [
         "Managed a team of 10 animators, scheduling and training new members.",
         "Supervised the work methods of animators, ensuring effective management of resources and activities."
-      ], 
+      ],
       "link": "https://ag-connect.com/"
     },
     {
@@ -118,7 +118,7 @@
       "responsibilities": [
         "Directed over 200 general assemblies with more than 100 co-owners, explaining platform functionalities to participants for smooth proceedings.",
         "Collaborated with lawyers to optimize voting processes, improving the efficiency of general assemblies."
-      ], 
+      ],
       "link": "https://ag-connect.com/"
     }
   ],
