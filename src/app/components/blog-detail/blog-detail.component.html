@@ -1,12 +1,39 @@
-<ng-container *ngIf="blog; else notFound">
-  <div class="blog-detail-container">
-    <h1 class="blog-title">{{ blog.title }}</h1>
-    <p class="blog-date">{{ blog.date | date }}</p>
-    <img [src]="blog.coverImage" *ngIf="blog.coverImage" class="cover-img" />
-    <markdown class="markdown-body" [data]="blog.content"></markdown>
-  </div>
-</ng-container>
+<main id="main" class="article-container" *ngIf="!loading && blog">
+  <a routerLink="/blogs" class="back-link">
+    <svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m12 19-7-7 7-7"/>
+      <path d="M19 12H5"/>
+    </svg>
+    Writing
+  </a>
 
-<ng-template #notFound>
-  <p>Article not found.</p>
-</ng-template>
+  <p class="article-meta">
+    {{ formatDate(blog.date) }}
+    <ng-container *ngIf="blog.tags && blog.tags.length > 0">
+      · {{ blog.tags.join(' · ') }}
+    </ng-container>
+  </p>
+
+  <h1 class="article-title">{{ blog.title }}</h1>
+
+  <article class="article-body">
+    <markdown class="prose-article" [data]="blog.content"></markdown>
+  </article>
+
+  <aside *ngIf="others.length > 0" class="more-articles">
+    <p class="more-heading">More</p>
+    <ul class="more-links">
+      <li *ngFor="let b of others">
+        <a [routerLink]="['/blogs', b.slug]" class="other-title">
+          {{ b.title }}
+        </a>
+      </li>
+    </ul>
+  </aside>
+</main>
+
+<main id="main" class="not-found-container" *ngIf="!loading && !blog">
+  <h1 class="not-found-title">Article not found</h1>
+  <p class="not-found-desc">That note does not exist.</p>
+  <a routerLink="/blogs" class="not-found-link">Back to writing</a>
+</main>

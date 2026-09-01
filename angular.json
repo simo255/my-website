@@ -35,10 +35,14 @@
             "styles": [
               "src/styles.scss"
             ],
+            "allowedCommonJsDependencies": [
+              "front-matter"
+            ],
             "scripts": []
           },
           "configurations": {
             "production": {
+              "baseHref": "/my-website/",
               "budgets": [
                 {
                   "type": "initial",
@@ -47,8 +51,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "15kB",
+                  "maximumError": "30kB"
                 }
               ],
               "outputHashing": "all"

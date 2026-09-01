@@ -1,4 +1,9 @@
+<a href="#main" class="sr-only">Skip to content</a>
 <app-header></app-header>
-<main>
-  <router-outlet></router-outlet>
-</main>
+<router-outlet></router-outlet>
+<footer class="site-footer">
+  <div class="footer-container">
+    <p class="footer-brand">{{ site.name }} · {{ site.location }}</p>
+    <p class="footer-role">{{ site.role }}</p>
+  </div>
+</footer>

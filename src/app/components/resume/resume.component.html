@@ -1,115 +1,333 @@
-<div *ngIf="resumeData" class="app-container">
-  <div class="card profile-card">
-    <div class="header">
-      <h1>{{ resumeData.profile.name }}</h1>
-      <p>{{ resumeData.profile.location }}</p>
+<main id="main">
+  <!-- Hero Section -->
+  <section class="section hero-section">
+    <div class="hero-grid">
+      <div>
+        <p class="rise hero-role">
+          {{ site.role }} · {{ site.location }}
+        </p>
+        <h1 class="rise rise-2 hero-name">
+          Mohamed<br />Bennouna
+        </h1>
+        <p class="rise rise-3 hero-focus">
+          {{ site.focus }}
+        </p>
+      </div>
+      <div class="rise rise-3 hero-bio-col">
+        <p class="hero-tagline">
+          {{ site.tagline }}
+        </p>
+        <div class="rise-4 hero-actions">
+          <a class="btn btn-primary" [href]="'mailto:' + site.email">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            Email me
+          </a>
+          <a class="btn btn-ghost" [href]="site.github" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+              <path d="M9 18c-4.51 2-5-2-7-2"/>
+            </svg>
+            GitHub
+          </a>
+          <a class="btn btn-ghost" [href]="site.linkedin" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect width="4" height="12" x="2" y="9"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="contact">
-      <a href="mailto:{{ resumeData.profile?.contact?.email }}">
-        <span class="contact-icon">📧</span>{{ resumeData.profile.contact.email }}
-      </a>
-    </div>
-    <div class="self-introduction">
-      <p>I’m a software developer with a background in software engineering.
-        I love creating custom scripts to simplify tasks and build innovative solutions using Angular, FastAPI, and
-        other technologies.
-        From crypto trading bots to custom apps, I enjoy solving complex problems. Check out my GitHub for my projects!
-      </p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="section-header">
-      <h2>Education</h2>
-    </div>
-    <div *ngIf="resumeData.education.logo" class="logo-container">
-      <img [src]="resumeData.education.logo" class="logo" />
-    </div>
-    <div class="education-details">
-      <h3>{{ resumeData.education.university }}</h3>
-      <p class="degree">{{ resumeData.education.degree }}</p>
-      <p class="location">{{ resumeData.education.location }}</p>
-      <p class="dates">{{ resumeData.education.dates.start }} - {{ resumeData.education.dates.end }}</p>
-      <ul class="specializations">
-        <li *ngFor="let specialization of resumeData.education.specializations">{{ specialization }}</li>
-      </ul>
-    </div>
-  </div>
+  </section>
 
-
-  <div class="card">
-    <div class="section-header">
-      <h2>Experience</h2>
+  <!-- About Section -->
+  <section class="section-surface">
+    <div class="section-container about-grid">
+      <div>
+        <p class="section-eyebrow">Now</p>
+        <h2 class="about-title">About</h2>
+      </div>
+      <div class="about-content">
+        <p *ngFor="let p of site.about">{{ p }}</p>
+        <p class="about-location">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Based in {{ site.location }}
+        </p>
+      </div>
     </div>
-    <div class="content grid">
-      <div *ngFor="let exp of resumeData.experience" class="grid-item">
-        <div class="experience-header">
-          <div class="job-details">
-            <h3 class="role">{{ exp.role }}</h3>
-            <h4 class="employer">{{ exp.employer }}</h4>
+  </section>
+
+  <!-- Education Section (Moved Higher: between About and Experience) -->
+  <section class="section education-section">
+    <div class="section-header">
+      <span class="header-accent-dot" aria-hidden="true"></span>
+      <h2 class="section-title">Education</h2>
+    </div>
+
+    <div class="education-grid">
+      <div *ngFor="let ed of education" class="edu-card">
+        <div class="edu-card-top">
+          <span class="edu-logo-wrapper">
+            <img [src]="ed.logo" [alt]="ed.school" class="edu-logo" />
+          </span>
+          <div class="edu-details">
+            <h3 class="edu-school">{{ ed.school }}</h3>
+            <p class="edu-degree">{{ ed.degree }}</p>
+            <p class="edu-meta">
+              {{ ed.dates }} · {{ ed.location }}
+              <ng-container *ngIf="ed.current">
+                · <span class="badge-now">Now</span>
+              </ng-container>
+            </p>
           </div>
         </div>
-        <p class="dates-location">{{ exp.dates.start }} - {{ exp.dates.end }} | {{ exp.location }}</p>
 
-        <ul class="responsibilities">
-          <li *ngFor="let responsibility of exp.responsibilities">{{ responsibility }}</li>
-        </ul>
-        <a *ngIf="exp.link" [href]="exp.link" class="experience-link" target="_blank" rel="noopener noreferrer">
-          <div *ngIf="exp.logo" class="logo-container">
-            <img [src]="exp.logo" class="logo" />
+        <p *ngIf="ed.summary" class="edu-summary">
+          {{ ed.summary }}
+        </p>
+
+        <!-- Coursework toggle for Master's -->
+        <div *ngIf="ed.courses && ed.courses.length > 0" class="edu-courses-section">
+          <button (click)="toggleCourses()" class="btn-toggle-courses" type="button">
+            <span>{{ showCourses ? 'Hide Selected Coursework' : 'View Selected Coursework (' + ed.courses.length + ')' }}</span>
+            <svg class="chevron-icon" [class.chevron-open]="showCourses" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+
+          <div *ngIf="showCourses" class="courses-list-container">
+            <ul class="courses-list">
+              <li *ngFor="let course of ed.courses" class="course-item">
+                <span class="course-bullet">—</span>
+                <span>{{ course }}</span>
+              </li>
+            </ul>
           </div>
-          View More
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="work" class="section-surface work-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="header-accent-dot" aria-hidden="true"></span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <ol class="experience-list">
+        <li *ngFor="let job of experience" class="experience-card">
+          <div class="job-timeline">
+            {{ job.start }}
+            <span class="timeline-dash"> — </span>
+            <span *ngIf="job.current" class="badge-now">Now</span>
+            <span *ngIf="!job.current">{{ job.end }}</span>
+          </div>
+          <div class="job-main">
+            <div class="job-header">
+              <div>
+                <h3 class="job-role">{{ job.role }}</h3>
+                <p class="job-employer">
+                  <span *ngIf="job.employer">{{ job.employer }} · </span>
+                  {{ job.location }}
+                </p>
+              </div>
+              <span *ngIf="job.logo" class="job-logo-wrapper">
+                <img [src]="job.logo" [alt]="job.employer || 'Company logo'" class="job-logo" />
+              </span>
+            </div>
+
+            <ul *ngIf="job.bullets && job.bullets.length > 0" class="job-bullets">
+              <li *ngFor="let b of job.bullets">
+                <span class="bullet-dash">—</span>
+                <span>{{ b }}</span>
+              </li>
+            </ul>
+
+            <div *ngFor="let track of job.tracks" class="job-track">
+              <h4 class="track-name">{{ track.name }}</h4>
+              <p class="track-dates">
+                {{ track.start }}
+                <span class="timeline-dash"> — </span>
+                <span *ngIf="track.current" class="badge-now">Now</span>
+                <span *ngIf="!track.current">{{ track.end }}</span>
+              </p>
+              <ul class="job-bullets">
+                <li *ngFor="let b of track.bullets">
+                  <span class="bullet-dash">—</span>
+                  <span>{{ b }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <a *ngIf="job.href" [href]="job.href" target="_blank" rel="noopener noreferrer" class="job-link">
+              View
+              <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 7h10v10"/>
+                <path d="M7 17 17 7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Selected Work Section -->
+  <section class="section">
+    <div class="section-header">
+      <span class="header-accent-dot" aria-hidden="true"></span>
+      <h2 class="section-title">Selected work</h2>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Featured Card (Item 0) -->
+      <ng-container *ngFor="let project of featuredProjects; let i = index">
+        <ng-container *ngIf="project.href">
+          <a [href]="project.href" target="_blank" rel="noopener noreferrer" class="project-card" [class.project-card-featured]="i === 0">
+            <div class="project-card-top">
+              <div>
+                <p class="project-year">{{ project.year }}</p>
+                <h3 class="project-title">{{ project.title }}</h3>
+              </div>
+              <svg class="project-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 7h10v10"/>
+                <path d="M7 17 17 7"/>
+              </svg>
+            </div>
+            <p class="project-blurb">{{ project.blurb }}</p>
+            <ul *ngIf="project.points && project.points.length > 0" class="project-points">
+              <li *ngFor="let pt of project.points">
+                <span class="bullet-dash">-</span>
+                <span>{{ pt }}</span>
+              </li>
+            </ul>
+            <p class="project-tags">{{ project.tags.join(' · ') }}</p>
+          </a>
+        </ng-container>
+        <ng-container *ngIf="!project.href">
+          <article class="project-card" [class.project-card-featured]="i === 0">
+            <div class="project-card-top">
+              <div>
+                <p class="project-year">{{ project.year }}</p>
+                <h3 class="project-title">{{ project.title }}</h3>
+              </div>
+            </div>
+            <p class="project-blurb">{{ project.blurb }}</p>
+            <ul *ngIf="project.points && project.points.length > 0" class="project-points">
+              <li *ngFor="let pt of project.points">
+                <span class="bullet-dash">-</span>
+                <span>{{ pt }}</span>
+              </li>
+            </ul>
+            <p class="project-tags">{{ project.tags.join(' · ') }}</p>
+          </article>
+        </ng-container>
+      </ng-container>
+    </div>
+
+    <p class="more-label">More</p>
+    <ul class="more-list">
+      <li *ngFor="let project of moreProjects">
+        <ng-container *ngIf="project.href">
+          <a [href]="project.href" target="_blank" rel="noopener noreferrer" class="more-row-link">
+            <div class="more-row-top">
+              <h3 class="more-row-title">{{ project.title }}</h3>
+              <span class="more-row-year">{{ project.year }}</span>
+            </div>
+            <p class="more-row-blurb">{{ project.blurb }}</p>
+            <p class="more-row-tags">{{ project.tags.join(' · ') }}</p>
+          </a>
+        </ng-container>
+        <ng-container *ngIf="!project.href">
+          <div class="more-row">
+            <div class="more-row-top">
+              <h3 class="more-row-title">{{ project.title }}</h3>
+              <span class="more-row-year">{{ project.year }}</span>
+            </div>
+            <p class="more-row-blurb">{{ project.blurb }}</p>
+            <p class="more-row-tags">{{ project.tags.join(' · ') }}</p>
+          </div>
+        </ng-container>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Notes Section -->
+  <section class="section-surface notes-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="header-accent-dot" aria-hidden="true"></span>
+        <h2 class="section-title">Notes</h2>
+      </div>
+
+      <ul class="notes-list">
+        <li *ngFor="let post of posts">
+          <a [routerLink]="['/blogs', post.slug]" class="note-row">
+            <div>
+              <h3 class="note-title">{{ post.title }}</h3>
+              <p class="note-excerpt">{{ post.excerpt }}</p>
+            </div>
+            <span class="note-date">{{ formatDate(post.date) }}</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="all-writing-wrapper">
+        <a routerLink="/blogs" class="all-writing-link">All writing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack Section -->
+  <section class="section stack-section">
+    <div class="section-header">
+      <span class="header-accent-dot" aria-hidden="true"></span>
+      <h2 class="section-title">Stack</h2>
+    </div>
+
+    <div class="stack-grid">
+      <div *ngFor="let group of skillGroups" class="stack-card">
+        <p class="stack-label">{{ group.label }}</p>
+        <p class="stack-items">{{ group.items.join(' · ') }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-surface contact-section">
+    <div class="section-container contact-container">
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="contact-title">Get in touch</h2>
+      <p class="contact-description">
+        Open to interesting work and side collaborations. Email is the fastest way.
+      </p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" [href]="'mailto:' + site.email">
+          {{ site.email }}
+        </a>
+        <a class="btn btn-ghost" [href]="site.phoneHref">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          {{ site.phone }}
+        </a>
+        <a class="btn btn-ghost" [href]="site.github" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a class="btn btn-ghost" [href]="site.linkedin" target="_blank" rel="noopener noreferrer">
+          LinkedIn
         </a>
       </div>
     </div>
-  </div>
-
-
-  <div class="card">
-    <div class="section-header">
-      <h2>Projects</h2>
-    </div>
-    <div class="content grid">
-      <div *ngFor="let project of resumeData.projects" class="grid-item">
-        <h3>{{ project.title }}</h3>
-        <p>{{ project.description }}</p>
-        <p><strong>Technologies:</strong> {{ project.technologies.join(', ') }}</p>
-        <a *ngIf="project.link" [href]="project.link" target="_blank" class="project-link">
-          <div *ngIf="project.logo" class="logo-container">
-            <img [src]="project.logo" class="logo" />
-          </div>View Project</a>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="card">
-    <div class="section-header">
-      <h2>Skills</h2>
-    </div>
-    <div class="content grid">
-      <div class="grid-item">
-        <p><strong>Languages:</strong> {{ resumeData.skills?.languages.join(', ') }}</p>
-      </div>
-      <div class="grid-item">
-        <p><strong>Interests:</strong> {{ resumeData.skills?.interests.join(', ') }}</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">
-      <p>Thank you for visiting my website!<br>
-      Simple but efficient, just like the code. <br>
-      Feel free to contact!
-      </p>
-    <a href="mailto:{{ resumeData.profile.contact.email }}" class="contact-link">
-      <i class="fas fa-envelope"></i> Email
-    </a>
-    <a href="{{ resumeData.profile.contact.github }}" target="_blank" class="contact-link">
-      <i class="fab fa-github"></i> GitHub
-    </a>
-    <a href="{{ resumeData.profile.contact.linkedin }}" target="_blank" class="contact-link">
-      <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
-  </div>
-
-</div>
+  </section>
+</main>

@@ -1,14 +1,22 @@
-<div class="blogs-list">
-  <h2>Articles</h2>
-  <div *ngFor="let blog of blogs" class="blog-card">
-    <a [routerLink]="['/blogs', blog.slug]" class="blog-link">
-      <ng-container *ngIf="blog.coverImage">
-        <img [src]="blog.coverImage" class="cover-img" />
-      </ng-container>
-      <div class="blog-info">
-        <h3>{{ blog.title }}</h3>
-        <p>{{ blog.date | date }}</p>
-      </div>
-    </a>
-  </div>
-</div>
+<main id="main" class="blogs-page">
+  <p class="eyebrow">Writing</p>
+  <h1 class="page-title">Notes</h1>
+  <p class="page-description">
+    Markets, cards, and whether the tools we use still leave room to think.
+  </p>
+
+  <ul class="blogs-list">
+    <li *ngFor="let post of blogs">
+      <a [routerLink]="['/blogs', post.slug]" class="blog-item">
+        <p class="blog-meta">
+          {{ formatDate(post.date) }}
+          <ng-container *ngIf="post.tags && post.tags.length > 0">
+            · {{ post.tags.join(' · ') }}
+          </ng-container>
+        </p>
+        <h2 class="blog-title">{{ post.title }}</h2>
+        <p class="blog-excerpt">{{ post.excerpt }}</p>
+      </a>
+    </li>
+  </ul>
+</main>

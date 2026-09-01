@@ -1,12 +1,14 @@
-<header class="header">
-  <div class="header-content">
-    <div class="logo-area">
-        <a href="" class="site-title">My Portfolio</a>
-
-    </div>
+<header class="site-header">
+  <div class="header-container">
+    <a routerLink="/" class="brand-link">
+      <span class="accent-box" aria-hidden="true"></span>
+      <span class="brand-text-mobile">MB</span>
+      <span class="brand-text-desktop">{{ site.name }}</span>
+    </a>
     <nav class="nav">
-      <a href="blogs" class="nav-link">Blogs</a>
-      <a href="contact" class="nav-link">Contact</a>
+      <a routerLink="/" fragment="work" class="nav-link">Work</a>
+      <a routerLink="/blogs" routerLinkActive="active" class="nav-link">Writing</a>
+      <a routerLink="/" fragment="contact" class="nav-link">Contact</a>
     </nav>
   </div>
 </header>

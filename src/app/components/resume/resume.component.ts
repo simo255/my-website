@@ -1,48 +1,47 @@
-import { Component } from '@angular/core';
-import { OnInit } from '@angular/core';
-import { ResumeService } from '../../services/resume.service'; 
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import {
+  site,
+  experience,
+  featuredProjects,
+  moreProjects,
+  education,
+  skillGroups,
+  Project,
+  Experience,
+} from '../../data/site-data';
+import { BlogService } from '../../services/blogs.service';
+import { Blog } from '../../interface/blog.model';
 
 @Component({
   selector: 'app-resume',
-  imports: [CommonModule],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './resume.component.html',
-  styleUrl: './resume.component.scss'
+  styleUrl: './resume.component.scss',
 })
 export class ResumeComponent implements OnInit {
+  site = site;
+  experience = experience;
+  featuredProjects = featuredProjects;
+  moreProjects = moreProjects;
+  education = education;
+  skillGroups = skillGroups;
+  posts: Blog[] = [];
+  showCourses = false;
 
- constructor(private resumeService: ResumeService) {
- }
- resumeData: any; 
+  constructor(private blogService: BlogService) {}
 
- ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    this.posts = await this.blogService.getAll();
+  }
 
+  toggleCourses(): void {
+    this.showCourses = !this.showCourses;
+  }
 
-console.log(`
-  **************************************************************
-  *                                                            *
-  *   You've landed on my online portfolio! It's a simple      *
-  *   website built to showcase my projects and passion        *
-  *   for development. I believe less is more when it comes    *
-  *   comes to design, but I’ve made sure it’s functional.     *
-  *                                                            *
-  *   Simple but efficient, just like the code.                *
-  *                                                            *
-  *   Take your time exploring, and don't hesitate to reach    *
-  *   out with any feedback!                                   *
-  *                                                            *
-  **************************************************************
-  `);
-  
-
-
-  this.resumeService.getResume().subscribe(
-    (data) => {
-      this.resumeData = data; 
-    },
-    (error) => {
-      console.error('Error fetching resume data', error); 
-    }
-  );
-}
+  formatDate(iso: string): string {
+    return this.blogService.formatDate(iso);
+  }
 }

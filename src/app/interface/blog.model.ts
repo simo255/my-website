@@ -3,6 +3,7 @@ export interface Blog {
   slug: string;
   date: string;
   coverImage?: string;
-  tags?: string[];
-  content: string; // Markdown content
+  tags: string[];
+  excerpt: string;
+  content: string;
 }
