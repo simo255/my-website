@@ -2,7 +2,7 @@
 title: Credit Cards, a Nightmare or a Dream?
 date: 2025-07-06
 coverImage: 
-tags: [AI, Society, Technology, Critical Thinking]
+tags: [Finance, Credit Cards, Canada]
 ---
 Credit cards are one of those tools that can either mess up your finances completely or unlock a bunch of perks that feel almost too good to be true.
 
@@ -78,4 +78,3 @@ Credit cards in Canada aren’t bad, and they’re not magic either. They’re j
 Use your brain before you use your card. And if you're thinking of churning, make sure you understand both the upside and the consequences.
 
 It’s your call: dream or nightmare ?
-

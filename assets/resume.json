@@ -1,197 +1,212 @@
 {
   "profile": {
     "name": "Mohamed Waridi Bennouna",
-    "location": "Montreal",
+    "displayName": "Mohamed Bennouna",
+    "role": "Software Developer",
+    "focus": "Technical Project Management · AI & Quantitative Systems",
+    "location": "Montréal, Québec, Canada",
+    "tagline": "Software Developer at Environment and Climate Change Canada (ECCC) and Master's student in Technology Project Management at Polytechnique Montréal.",
+    "about": [
+      "Software Developer with experience building and supporting scalable applications across web, backend, cloud, CRM, and data environments.",
+      "At Environment and Climate Change Canada (ECCC), I develop and maintain applications using technologies such as C#, Next.js, Azure, Dynamics 365, Dataverse, SQL, and Microsoft Power Platform. I work across features, integrations, and data layers within ECCC's digital and regulatory platforms."
+    ],
     "contact": {
       "email": "00bmed255@gmail.com",
+      "phone": "+1 514-660-6470",
+      "phoneHref": "tel:+15146606470",
       "github": "https://github.com/simo255",
-      "linkedin": "https://www.linkedin.com/in/mwaridibennouna/",
-      "website": "https://simo255.github.io/my-website/"
+      "linkedin": "https://www.linkedin.com/in/mohamedwb/"
     }
   },
-  "education": [
+  "experience": [
     {
-      "university": "Polytechnique Montréal",
-      "degree": "Master's in Industrial Engineering — Technology Project Management",
-      "location": "Montreal",
-      "dates": {
-        "start": "September 2025",
-        "end": "Present"
-      },
-      "logo": "assets/images/polymtl.png",
-      "description": "Professional master's combining technical expertise with project management skills: project planning, progress control, risk management, stakeholder coordination, process optimization, strategic decision-making, and large-scale software project leadership."
+      "employer": "Environnement et Changement climatique Canada",
+      "role": "Software Developer",
+      "location": "Montréal, Québec, Canada · Hybride",
+      "start": "Jun 2024",
+      "end": "Present",
+      "current": true,
+      "href": "https://www.canada.ca/en/environment-climate-change.html",
+      "logo": "assets/images/GoC.png",
+      "bullets": [
+        "Develop and maintain software solutions across portal, backend, CRM, integration, and data layers across ECCC's digital and regulatory platforms.",
+        "Build and deliver solutions using C#, Next.js, Drupal, Azure Functions, Dynamics 365, Dataverse, Azure SQL, ADLS, and Microsoft Power Platform.",
+        "Develop and maintain model-driven Power Apps and Power Automate workflows.",
+        "Investigate and resolve defects across distributed services, integrations, and data flows, from root-cause analysis through testing and delivery.",
+        "Collaborate with business analysts and technical teams to translate business requirements into reliable and maintainable software solutions.",
+        "Develop custom JavaScript components to extend platform functionality and improve user experience.",
+        "Support the testing, integration, and delivery of application changes across multiple services and environments."
+      ]
     },
     {
-      "university": "Polytechnique Montréal",
-      "degree": "Bachelor of Software Engineering",
-      "location": "Montreal",
-      "dates": {
-        "start": "September 2020",
-        "end": "May 2024"
-      },
-      "logo": "assets/images/polymtl.png",
-      "specializations": [
-        "Full Stack Development",
-        "Cloud Computing & DevOps",
-        "Cyber-Security"
+      "employer": "AG-CONNECT-SOLUTIONS",
+      "role": "Assemblies Leadership & Operations",
+      "location": "Montréal, Québec, Canada · Hybride",
+      "start": "Nov 2021",
+      "end": "Jun 2024",
+      "tracks": [
+        {
+          "name": "Team Lead - Assemblies",
+          "start": "Aug 2023",
+          "end": "Jan 2024",
+          "bullets": [
+            "Led a team of meeting Co-hosts and supported coordination and operations.",
+            "Planned team schedules, supported onboarding, and helped standardize operational practices.",
+            "Provided guidance and quality oversight to ensure consistent delivery across client meetings."
+          ]
+        },
+        {
+          "name": "General assemblies Co-host",
+          "start": "Nov 2021",
+          "end": "Jun 2024",
+          "bullets": [
+            "Co-hosted and presented more than 200 virtual and in-person general assemblies involving 100+ condominium owners.",
+            "Presented and explained platform functionality to participants while ensuring smooth execution of meetings and voting processes.",
+            "Collaborated with legal professionals and other stakeholders to coordinate assemblies and improve voting processes.",
+            "Trained and onboarded new team members and coordinated schedules."
+          ]
+        }
+      ]
+    },
+    {
+      "employer": "Studio KRAFTON Montréal",
+      "role": "Gameplay Programmer — C++ (Stage)",
+      "location": "Montréal, Québec, Canada · Hybride",
+      "start": "May 2023",
+      "end": "Aug 2023",
+      "href": "https://www.ign.com/games/the-bird-that-drinks-tears",
+      "logo": "assets/images/Krafton.png",
+      "bullets": [
+        "Contributed to the initial conception and development of an AAA game project using C++ and Unreal Engine 5.",
+        "Implemented gameplay mechanics including player attacks, movement, health systems, and gameplay-related functionality.",
+        "Designed and implemented a generic spatial detection system using Octree-based approaches and Geometric Tools to improve performance.",
+        "Worked in an Agile development environment using Jira and collaborated with designers and artists to integrate gameplay features.",
+        "Created technical documentation in Confluence to support maintainability and developer onboarding."
+      ]
+    },
+    {
+      "employer": "Ludia",
+      "role": "Gameplay Programmer — C++ (Stage)",
+      "location": "Montréal, Québec, Canada · Hybride",
+      "start": "May 2022",
+      "end": "Aug 2022",
+      "href": "https://play.google.com/store/apps/details?id=com.ludia.jurassicworld",
+      "logo": "assets/images/ludia.png",
+      "bullets": [
+        "Developed and optimized gameplay and UI functionality in C++ for Jurassic World: The Game, a mobile game of more than 20 million users.",
+        "Collaborated closely with artists and game designers to integrate new gameplay and UI features.",
+        "Designed and implemented dynamic UI functionality using C++, JSON, and VBA, giving designers greater flexibility to configure interface elements.",
+        "Created technical design documentation for implemented features to support collaboration and maintainability."
       ]
     }
   ],
-  "experience": [
+  "featuredProjects": [
     {
-      "employer": "Environment and Climate Change Canada (ECCC)",
-      "role": "Developer / IT Analyst — Regulatory Services Platform (RSP)",
-      "location": "Montreal",
-      "dates": {
-        "start": "June 2025",
-        "end": "Present"
-      },
-      "responsibilities": [
-        "Implement new features, fix bugs, analyze incidents, and ensure platform stability across multiple environments on the Regulatory Services Platform.",
-        "Work across user portals, backend services, CRM integrations, data processing, and cloud services using Drupal, Next.js, C#, Azure Functions, Dynamics 365, Dataverse, Azure SQL, and Azure Data Lake Storage (ADLS).",
-        "Translate business requirements into technical solutions, coordinate with business analysts, and support delivery and validation in an Agile environment."
-      ],
-      "logo": "assets/images/ECCC.png",
-      "link": "https://www.ec.gc.ca/"
+      "title": "Algorithmic Trading & Quantitative Research Platform",
+      "year": "Ongoing",
+      "tags": ["Python", "Hyperliquid", "Backtesting", "Risk", "Finance", "Algorithms"],
+      "blurb": "Building a systematic trading research platform focused on quantitative strategy development, backtesting, and evaluation.",
+      "points": [
+        "Develop and evaluate algorithmic trading strategies using historical market data.",
+        "Build research workflows for testing strategy ideas across multiple assets and market regimes.",
+        "Design reusable backtesting and strategy components to support rapid quantitative experimentation.",
+        "Explore systematic approaches to momentum, market behavior, portfolio construction, and risk management.",
+        "Continuously refine strategies through out-of-sample testing, robustness analysis, and iterative research."
+      ]
     },
     {
-      "employer": "Environment and Climate Change Canada (ECCC)",
-      "role": "Developer / IT Analyst — Power Platform & Digital Services (PPDS)",
-      "location": "Montreal",
-      "dates": {
-        "start": "June 2024",
-        "end": "May 2025"
-      },
-      "responsibilities": [
-        "Developed and maintained applications using the Microsoft Power Platform ecosystem: Power Apps, Power Automate, Power Pages, and Dataverse.",
-        "Built custom JavaScript components to enhance user experience in model-driven apps.",
-        "Performed security code reviews using Fortify and contributed to fixing a critical bug in an open-source plugin used across multiple internal applications.",
-        "Created an onboarding automation app for new employees using Power Apps and Power Automate.",
-        "Implemented a PowerShell script to track security configuration changes and integrated it into the Azure DevOps pipeline."
-      ],
-      "logo": "assets/images/ECCC.png",
-      "link": "https://www.ec.gc.ca/"
+      "title": "Scrabble — Cross-Platform Web & Android Application",
+      "year": "2023",
+      "tags": ["TypeScript", "GitLab", "Angular", "Node.js", "Express", "Socket.IO", "Firebase"],
+      "blurb": "Developed a cross-platform Scrabble application as part of a five-person development team.",
+      "points": [
+        "Designed and implemented a multi-service architecture with an Express backend.",
+        "Built real-time communication features using Socket.IO.",
+        "Implemented user profiles and authentication-related functionality using Firebase.",
+        "Collaborated across frontend and backend components throughout the development lifecycle."
+      ]
     },
     {
-      "employer": "Eduplan Solutions",
-      "role": "Full-Stack Developer — Contractor",
-      "location": "Montreal",
-      "dates": {
-        "start": "January 2024",
-        "end": "May 2024"
-      },
-      "responsibilities": [
-        "Developed an AI-powered educational planning web app using Angular (frontend) and FastAPI with PostgreSQL (backend), deployed on AWS EC2 (Ubuntu).",
-        "Integrated the Mistral LLM for automated lesson plan generation.",
-        "Set up CI/CD pipelines with GitLab and contributed to Agile project management."
-      ],
-      "logo": "assets/images/eduplan.png",
-      "link": "https://www.matara.solutions/"
-    },
-    {
-      "employer": "Krafton Montreal Studio",
-      "role": "Gameplay Developer C++ — Internship",
-      "location": "Montreal",
-      "dates": {
-        "start": "May 2023",
-        "end": "August 2023"
-      },
-      "responsibilities": [
-        "Contributed to the AAA game The Bird That Drinks Tears using Unreal Engine 5.2 in an Agile environment with Jira.",
-        "Implemented game mechanics including attack systems, character movement, and health management in C++.",
-        "Designed a cheat detection system based on an Octree data structure to improve game stability and performance."
-      ],
-      "logo": "assets/images/Krafton.png",
-      "link": "https://www.ign.com/games/the-bird-that-drinks-tears"
-    },
-    {
-      "employer": "Ludia — Jamcity Company",
-      "role": "Video Game Developer C++ — Internship",
-      "location": "Montreal",
-      "dates": {
-        "start": "May 2022",
-        "end": "August 2022"
-      },
-      "responsibilities": [
-        "Optimized the UI of Jurassic World The Game in C++ for over 20 million users.",
-        "Developed a real-time configurable button system using C++, JSON, and VBA, enabling designers to dynamically adjust UI elements without developer intervention.",
-        "Worked closely with artists and designers to integrate new gameplay features through technical design documents."
-      ],
-      "logo": "assets/images/ludia.png",
-      "link": "https://play.google.com/store/apps/details?id=com.ludia.jurassicworld"
-    },
-    {
-      "employer": "AG-Connect — IMMOSQUARE",
-      "role": "Team Leader of Animators",
-      "location": "Montreal",
-      "dates": {
-        "start": "August 2023",
-        "end": "January 2024"
-      },
-      "responsibilities": [
-        "Managed a team of 10 animators, handled scheduling, and trained new members.",
-        "Supervised work methods ensuring effective management of resources and activities."
-      ],
-      "link": "https://ag-connect.com/"
-    },
-    {
-      "employer": "AG-Connect",
-      "role": "Host of Virtual and In-Person General Assemblies",
-      "location": "Montreal",
-      "dates": {
-        "start": "November 2021",
-        "end": "Present"
-      },
-      "responsibilities": [
-        "Directed over 200 general assemblies with more than 100 co-owners, explaining platform functionalities for smooth proceedings.",
-        "Collaborated with lawyers to optimize voting processes, improving assembly efficiency."
-      ],
-      "link": "https://ag-connect.com/"
+      "title": "News-to-Instagram agent workflow",
+      "year": "Ongoing",
+      "tags": ["Agents", "Automation", "Python"],
+      "blurb": "Agents that collect news from multiple sources, process and format content, and publish Instagram-ready posts without manual intervention. Orchestration, reliability, and scalable delivery."
     }
   ],
-  "projects": [
-    {
-      "title": "Crypto & Stock Trading Web App",
-      "technologies": ["Next.js", "Python", "AI/LLM", "Data Visualization"],
-      "description": "Building a web application for crypto and stock market trading that combines data visualization, financial dashboards, and AI-assisted insights to transform complex market data into actionable analysis.",
-      "type": "Personal Project — In Progress"
-    },
-    {
-      "title": "Autonomous AI Content Workflow",
-      "technologies": ["AI Agents", "Automation", "Python", "Social Media APIs"],
-      "description": "Developing an autonomous AI agent workflow that fetches news from multiple sources, analyzes and reformats content, then generates and publishes optimized Instagram posts without human intervention.",
-      "type": "Personal Project — In Progress"
-    },
-    {
-      "title": "This Website",
-      "technologies": ["Angular", "TypeScript", "SCSS"],
-      "description": "Personal portfolio website showcasing my resume, projects, and blog posts.",
-      "type": "Personal Project"
-    },
+  "moreProjects": [
     {
       "title": "betteResume",
-      "technologies": ["JavaScript", "HTML", "CSS", "Chrome Extension"],
-      "description": "Chrome extension that generates AI-powered resumes in a few clicks, supporting multiple LLMs (Mistral, Gemini) with Overleaf integration for further customization.",
-      "type": "Personal Project",
-      "link": "https://github.com/simo255/betteResume",
-      "logo": "assets/images/betteresume.png"
+      "year": "2024",
+      "href": "https://github.com/simo255/betteResume",
+      "tags": ["Chrome extension", "JavaScript", "LaTeX", "AI/LLM"],
+      "blurb": "Chrome extension that reads a job post, calls Mistral or Gemini with your own key, and opens a tailored resume in Overleaf. Keys encrypted locally."
     },
     {
-      "title": "Custom Android ROMs",
-      "technologies": ["C++", "C", "Shell", "Android SDK"],
-      "description": "Designed and built custom ROMs and kernels for Huawei P9 Lite and Honor 5C, delivering significant performance and customization improvements for over 1,000 users on XDA-Developers.",
-      "type": "Open Source",
-      "link": "https://linktr.ee/simo255"
+      "title": "Custom Android ROMs & kernels",
+      "year": "2019",
+      "href": "https://linktr.ee/simo255",
+      "tags": ["C++", "Shell", "Android SDK", "XDA"],
+      "blurb": "Custom ROMs and kernels for Huawei P9 lite and Honor 5C. Performance and customization work used by 1,000+ users on XDA."
     },
     {
-      "title": "Scrabble: Cross-Platform Web & Android App",
-      "technologies": ["Angular", "Kotlin", "Node.js", "Socket.IO", "Firebase"],
-      "description": "Developed a cross-platform Scrabble web app in a microservices architecture as part of a 5-person team. Implemented the Express server with Socket.IO and designed user profiles with Firebase and Firestore.",
-      "type": "University Project"
+      "title": "Sports AI: AFCON data visualization",
+      "year": "2024",
+      "tags": ["Python", "Pandas", "Plotly", "FastAPI", "AWS"],
+      "blurb": "Web application to visualize football statistics using interactive dashboards and data-driven insights."
     }
   ],
-  "skills": {
-    "languages": ["TypeScript", "JavaScript", "Python", "C++", "C#", "Java", "SQL", "Shell", "Angular", "Next.js", "FastAPI", "Drupal", "React", "Azure", "AWS", "Docker", "Power Platform", "Dynamics 365", "Dataverse", "Git", "CI/CD"],
-    "interests": ["Financial Markets", "Crypto & Blockchain", "AI & Automation", "Ping-Pong"]
-  }
+  "education": [
+    {
+      "school": "Polytechnique Montréal",
+      "degree": "Master's degree, Industrial Engineering — Technology Project Management",
+      "location": "Montréal, Québec, Canada",
+      "dates": "Aug 2025 — Present",
+      "current": true,
+      "logo": "assets/images/polymtl.png",
+      "summary": "Specialized in technology project governance, systems engineering, project planning & scheduling, risk management, and tech leadership.",
+      "courses": [
+        "IND6130 — Technology Project Processes & Configuration",
+        "IND6131 — Technology Project Financing & Budgeting",
+        "IND6115C — Systems Engineering Management",
+        "IND6132A — Technology Project Planning & Monitoring",
+        "IND6139 — Large-Scale Project Management & Control",
+        "IND8119 — Team Management in Technology Environments",
+        "LOG8371 — Software Quality Engineering",
+        "IND8137A — Technology Entrepreneurship",
+        "IND8108 — Creativity in Science & Engineering",
+        "IND8120 — New Product & Service Commercialization"
+      ]
+    },
+    {
+      "school": "Polytechnique Montréal",
+      "degree": "Bachelor of Engineering, Software Engineering",
+      "location": "Montréal, Québec, Canada",
+      "dates": "2020 — 2024",
+      "current": false,
+      "logo": "assets/images/polymtl.png",
+      "summary": "Software development, object-oriented programming, software architecture, and engineering practices."
+    }
+  ],
+  "skillGroups": [
+    {
+      "label": "Languages",
+      "items": ["JavaScript", "TypeScript", "Python", "C#", "C++", "Java", "SQL", "HTML/CSS", "Liquid"]
+    },
+    {
+      "label": "Frameworks / platforms",
+      "items": ["Drupal", "Next.js", "React", "Angular", "FastAPI", "Node.js", "Azure Functions", "Microsoft Power Platform"]
+    },
+    {
+      "label": "Data / cloud",
+      "items": ["Dataverse", "Dynamics 365", "Azure SQL", "ADLS", "Databricks", "AWS", "Docker"]
+    },
+    {
+      "label": "AI / automation",
+      "items": ["LLM integration", "Agent workflows", "Prompt engineering", "GitHub Copilot", "Codex"]
+    },
+    {
+      "label": "Tools & Methods",
+      "items": ["Azure DevOps", "Git", "GitHub", "GitLab", "Jira", "Confluence", "Fortify", "Figma", "Agile"]
+    }
+  ]
 }
