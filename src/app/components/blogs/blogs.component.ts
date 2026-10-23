@@ -9,15 +9,17 @@ import { Blog } from '../../interface/blog.model';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './blogs.component.html',
-  styleUrl: './blogs.component.scss'
+  styleUrl: './blogs.component.scss',
 })
 export class BlogsComponent implements OnInit {
   blogs: Blog[] = [];
+  loading = true;
 
   constructor(private blogService: BlogService) {}
 
   async ngOnInit(): Promise<void> {
     this.blogs = await this.blogService.getAll();
+    this.loading = false;
   }
 
   formatDate(iso: string): string {

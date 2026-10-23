@@ -1,8 +1,21 @@
-<main id="main" class="article-container" *ngIf="!loading && blog">
+<main
+  id="main"
+  tabindex="-1"
+  class="article-container"
+  *ngIf="!loading && blog"
+>
   <a routerLink="/blogs" class="back-link">
-    <svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-      <path d="m12 19-7-7 7-7"/>
-      <path d="M19 12H5"/>
+    <svg
+      class="back-icon"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.75"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="m12 19-7-7 7-7" />
+      <path d="M19 12H5" />
     </svg>
     Writing
   </a>
@@ -32,8 +45,17 @@
   </aside>
 </main>
 
-<main id="main" class="not-found-container" *ngIf="!loading && !blog">
+<main
+  id="main"
+  tabindex="-1"
+  class="not-found-container"
+  *ngIf="!loading && !blog"
+>
   <h1 class="not-found-title">Article not found</h1>
   <p class="not-found-desc">That note does not exist.</p>
   <a routerLink="/blogs" class="not-found-link">Back to writing</a>
+</main>
+
+<main id="main" tabindex="-1" class="article-container" *ngIf="loading">
+  <p role="status">Loading note…</p>
 </main>

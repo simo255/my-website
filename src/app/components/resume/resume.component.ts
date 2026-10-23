@@ -1,16 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import {
-  site,
-  experience,
-  featuredProjects,
-  moreProjects,
-  education,
-  skillGroups,
-  Project,
-  Experience,
-} from '../../data/site-data';
+import { getPortfolioData } from '../../data/site-data';
+import { LanguageService } from '../../services/language.service';
 import { BlogService } from '../../services/blogs.service';
 import { Blog } from '../../interface/blog.model';
 
@@ -22,26 +14,38 @@ import { Blog } from '../../interface/blog.model';
   styleUrl: './resume.component.scss',
 })
 export class ResumeComponent implements OnInit {
-  site = site;
-  experience = experience;
-  featuredProjects = featuredProjects;
-  moreProjects = moreProjects;
-  education = education;
-  skillGroups = skillGroups;
-  posts: Blog[] = [];
-  showCourses = false;
+  private readonly langService = inject(LanguageService);
+  private readonly blogService = inject(BlogService);
 
-  constructor(private blogService: BlogService) {}
+  readonly currentData = computed(() => getPortfolioData(this.langService.lang()));
+
+  get site() { return this.currentData().site; }
+  get experience() { return this.currentData().experience; }
+  get featuredProjects() { return this.currentData().featuredProjects; }
+  get moreProjects() { return this.currentData().moreProjects; }
+  get education() { return this.currentData().education; }
+  get skillGroups() { return this.currentData().skillGroups; }
+  get ui() { return this.currentData().ui; }
+
+  posts: Blog[] = [];
 
   async ngOnInit(): Promise<void> {
     this.posts = await this.blogService.getAll();
   }
 
-  toggleCourses(): void {
-    this.showCourses = !this.showCourses;
-  }
-
   formatDate(iso: string): string {
     return this.blogService.formatDate(iso);
+  }
+
+  get cvUrl(): string {
+    return this.langService.lang() === 'en'
+      ? 'assets/Mohamed_Waridi_Bennouna_CV_EN.pdf'
+      : 'assets/Mohamed_Waridi_Bennouna_CV_FR.pdf';
+  }
+
+  printResume(): void {
+    if (typeof window !== 'undefined') {
+      window.open(this.cvUrl, '_blank');
+    }
   }
 }

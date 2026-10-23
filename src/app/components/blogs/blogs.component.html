@@ -1,22 +1,33 @@
-<main id="main" class="blogs-page">
-  <p class="eyebrow">Writing</p>
-  <h1 class="page-title">Notes</h1>
+<main id="main" class="blogs-page" tabindex="-1">
+  <p class="eyebrow">Notes</p>
+  <h1 class="page-title">Writing</h1>
   <p class="page-description">
-    Markets, cards, and whether the tools we use still leave room to think.
+    Thoughts on technology, finance, and everyday questions.
   </p>
-
   <ul class="blogs-list">
-    <li *ngFor="let post of blogs">
+    <li *ngFor="let post of blogs; let i = index">
       <a [routerLink]="['/blogs', post.slug]" class="blog-item">
-        <p class="blog-meta">
-          {{ formatDate(post.date) }}
-          <ng-container *ngIf="post.tags && post.tags.length > 0">
-            · {{ post.tags.join(' · ') }}
-          </ng-container>
-        </p>
-        <h2 class="blog-title">{{ post.title }}</h2>
-        <p class="blog-excerpt">{{ post.excerpt }}</p>
+        <span class="blog-number" aria-hidden="true">0{{ i + 1 }}</span>
+        <div>
+          <p class="blog-meta">
+            {{ formatDate(post.date) }}
+            <span *ngIf="post.tags.length">/ {{ post.tags[0] }}</span>
+          </p>
+          <h2 class="blog-title">{{ post.title }}</h2>
+          <p class="blog-excerpt">{{ post.excerpt }}</p>
+          <div class="tags">
+            <span *ngFor="let tag of post.tags" class="tag">{{ tag }}</span>
+          </div>
+        </div>
+        <span class="blog-arrow" aria-hidden="true">↗</span>
       </a>
     </li>
   </ul>
+  <p *ngIf="loading" role="status" class="page-description">Loading notes…</p>
+  <p *ngIf="!loading && !blogs.length" class="page-description">
+    The notes couldn’t be loaded. Please try again later.
+  </p>
+  <a routerLink="/" class="text-link back-home"
+    ><span aria-hidden="true">←</span> Back to the portfolio</a
+  >
 </main>

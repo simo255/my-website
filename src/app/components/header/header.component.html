@@ -1,14 +1,43 @@
 <header class="site-header">
-  <div class="header-container">
-    <a routerLink="/" class="brand-link">
-      <span class="accent-box" aria-hidden="true"></span>
-      <span class="brand-text-mobile">MB</span>
-      <span class="brand-text-desktop">{{ site.name }}</span>
+  <div class="container header-inner">
+    <a routerLink="/" class="brand" aria-label="Mohamed Waridi Bennouna home">
+      <span class="monogram" aria-hidden="true">MB</span>
+
     </a>
-    <nav class="nav">
-      <a routerLink="/" fragment="work" class="nav-link">Work</a>
-      <a routerLink="/blogs" routerLinkActive="active" class="nav-link">Writing</a>
-      <a routerLink="/" fragment="contact" class="nav-link">Contact</a>
+    <nav aria-label="Main navigation">
+      <a routerLink="/" fragment="about">{{ ui.navAbout }}</a>
+      <a routerLink="/" fragment="experience">{{ ui.navExperience }}</a>
+      <a routerLink="/" fragment="work">{{ ui.navWork }}</a>
+      <a
+        routerLink="/blogs"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >{{ ui.navWriting }}</a
+      >
+      <a routerLink="/" fragment="contact" class="nav-contact"
+        >{{ ui.navContact }} <span aria-hidden="true">↗</span></a
+      >
+      <div class="lang-switch" role="group" aria-label="Language selection">
+        <button
+          type="button"
+          class="lang-btn"
+          [class.active]="currentLang === 'fr'"
+          (click)="switchLang('fr')"
+          aria-label="Passer en français"
+        >
+          FR
+        </button>
+        <span class="lang-divider" aria-hidden="true">/</span>
+        <button
+          type="button"
+          class="lang-btn"
+          [class.active]="currentLang === 'en'"
+          (click)="switchLang('en')"
+          aria-label="Switch to English"
+        >
+          EN
+        </button>
+      </div>
     </nav>
   </div>
 </header>

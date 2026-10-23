@@ -1,10 +1,10 @@
 .article-container {
-  max-width: 42rem;
+  max-width: 49rem;
   margin: 0 auto;
-  padding: 3.5rem 1.25rem;
+  padding: 4.5rem 1.25rem;
 
   @media (min-width: 640px) {
-    padding: 3.5rem 2rem;
+    padding: 4.5rem 2rem;
   }
 }
 
@@ -37,14 +37,14 @@
 
 .article-title {
   font-size: 2.25rem;
-  line-height: 1.1;
-  font-weight: 500;
+  line-height: 1.15;
+  font-weight: 600;
   letter-spacing: -0.025em;
   color: var(--color-fg);
   margin: 0.75rem 0 0;
 
   @media (min-width: 640px) {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -88,7 +88,7 @@
 }
 
 .not-found-container {
-  max-width: 42rem;
+  max-width: 49rem;
   margin: 0 auto;
   padding: 6rem 1.25rem;
   text-align: center;
@@ -120,4 +120,24 @@
   &:hover {
     color: var(--color-fg);
   }
+}
+
+.article-container,
+.not-found-container {
+  min-height: 65vh;
+}
+.article-meta {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.article-title {
+  line-height: 1.15;
+}
+.article-body {
+  margin-top: 3rem;
+}
+.more-heading {
+  color: var(--color-accent);
+  font-size: 13px;
 }

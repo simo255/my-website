@@ -32,7 +32,7 @@ export class BlogService {
     }
 
     return blogs.sort(
-      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
     );
   }
 
@@ -48,13 +48,15 @@ export class BlogService {
 
       body = body.replace(
         new RegExp(`^#\\s+${escapeRegExp(title)}\\s*\\n+`, 'i'),
-        ''
+        '',
       );
 
       const excerptRaw = body
         .split('\n')
         .map((line) => line.trim())
-        .filter((line) => line && !line.startsWith('#') && !line.startsWith('---'))
+        .filter(
+          (line) => line && !line.startsWith('#') && !line.startsWith('---'),
+        )
         .join(' ')
         .replace(/[*_`]/g, '')
         .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
@@ -70,15 +72,22 @@ export class BlogService {
       return {
         title,
         slug,
-        date: attributes.date ? String(attributes.date) : '',
+        // YAML parses unquoted dates as UTC Date objects. Keep the calendar date
+        // instead of converting it to a locale-dependent JavaScript date string.
+        date:
+          attributes.date instanceof Date
+            ? attributes.date.toISOString().slice(0, 10)
+            : attributes.date
+              ? String(attributes.date)
+              : '',
         coverImage: attributes.coverImage || '',
         tags: Array.isArray(attributes.tags)
           ? attributes.tags
           : attributes.tags
-          ? String(attributes.tags)
-              .split(',')
-              .map((t: string) => t.trim())
-          : [],
+            ? String(attributes.tags)
+                .split(',')
+                .map((t: string) => t.trim())
+            : [],
         excerpt,
         content: body,
       };
@@ -92,3 +101,4 @@ export class BlogService {
     return formatBlogDate(iso);
   }
 }
+
