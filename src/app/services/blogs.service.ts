@@ -60,14 +60,9 @@ export class BlogService {
         .join(' ')
         .replace(/[*_`]/g, '')
         .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-        .slice(0, 220)
         .trim();
 
-      const excerpt = excerptRaw
-        ? excerptRaw.endsWith('.')
-          ? excerptRaw
-          : `${excerptRaw}.`
-        : '';
+      const excerpt = toExcerpt(excerptRaw, 220);
 
       return {
         title,
@@ -102,3 +97,12 @@ export class BlogService {
   }
 }
 
+/** Cut at the last word boundary within `max` chars so previews never end mid-word. */
+function toExcerpt(text: string, max: number): string {
+  if (!text) return '';
+  if (text.length <= max) return /[.!?…]$/.test(text) ? text : `${text}.`;
+  const cut = text.slice(0, max + 1);
+  const lastSpace = cut.lastIndexOf(' ');
+  const words = lastSpace > 0 ? cut.slice(0, lastSpace) : text.slice(0, max);
+  return `${words.replace(/[\s.,;:!?—–-]+$/, '')}…`;
+}

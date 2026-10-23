@@ -17,27 +17,27 @@
       <a routerLink="/" fragment="contact" class="nav-contact"
         >{{ ui.navContact }} <span aria-hidden="true">↗</span></a
       >
-      <div class="lang-switch" role="group" aria-label="Language selection">
-        <button
-          type="button"
-          class="lang-btn"
-          [class.active]="currentLang === 'fr'"
-          (click)="switchLang('fr')"
-          aria-label="Passer en français"
-        >
-          FR
-        </button>
-        <span class="lang-divider" aria-hidden="true">/</span>
-        <button
-          type="button"
-          class="lang-btn"
-          [class.active]="currentLang === 'en'"
-          (click)="switchLang('en')"
-          aria-label="Switch to English"
-        >
-          EN
-        </button>
-      </div>
     </nav>
+    <div class="lang-switch" role="group" aria-label="Language selection">
+      <button
+        type="button"
+        class="lang-btn"
+        [class.active]="currentLang === 'fr'"
+        (click)="switchLang('fr')"
+        aria-label="Passer en français"
+      >
+        FR
+      </button>
+      <span class="lang-divider" aria-hidden="true">/</span>
+      <button
+        type="button"
+        class="lang-btn"
+        [class.active]="currentLang === 'en'"
+        (click)="switchLang('en')"
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
+    </div>
   </div>
 </header>

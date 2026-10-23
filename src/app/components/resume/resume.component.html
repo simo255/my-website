@@ -5,7 +5,7 @@
       <h1 id="hero-heading">Mohamed<br />Waridi Bennouna</h1>
       <p class="hero-description">{{ site.tagline }}</p>
       <div class="hero-actions">
-        <a routerLink="/" fragment="work" class="btn">{{ ui.viewProjects }} <span aria-hidden="true">↘</span></a>
+        <a routerLink="/" fragment="work" class="btn btn-primary">{{ ui.viewProjects }} <span aria-hidden="true">↘</span></a>
         <a
           [href]="cvUrl"
           target="_blank"
@@ -31,8 +31,8 @@
         <p class="current-detail">{{ education[0].school }}</p>
       </div>
       <div class="profile-links">
-        <a [href]="site.github" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        <a [href]="site.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a [href]="site.github" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <a [href]="site.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
       </div>
     </aside>
   </section>
@@ -59,8 +59,8 @@
           <div class="career-body">
             <p *ngIf="job.location" class="career-location">{{ job.location }}</p>
             <ul *ngIf="job.bullets"><li *ngFor="let bullet of job.bullets">{{ bullet }}</li></ul>
-            <div *ngFor="let track of job.tracks" class="career-track"><h4>{{ track.name }}</h4><p class="career-date">{{ track.start }} — {{ track.end }}</p><ul><li *ngFor="let bullet of track.bullets">{{ bullet }}</li></ul></div>
-            <a *ngIf="job.href" [href]="job.href" target="_blank" rel="noopener noreferrer" class="text-link">{{ job.employer }} ↗</a>
+            <div *ngFor="let track of job.tracks" class="career-track"><h3>{{ track.name }}</h3><p class="career-date">{{ track.start }} — {{ track.end }}</p><ul><li *ngFor="let bullet of track.bullets">{{ bullet }}</li></ul></div>
+            <a *ngIf="job.href" [href]="job.href" target="_blank" rel="noopener noreferrer" class="text-link">{{ job.employer }} <span aria-hidden="true">↗</span></a>
           </div>
         </details>
       </ng-container>
@@ -75,13 +75,13 @@
     <div class="project-list">
       <article *ngFor="let project of featuredProjects" class="project-row">
         <div class="project-info"><p class="project-year">{{ project.year }}</p><h3>{{ project.title }}</h3></div>
-        <div class="project-content"><p>{{ project.blurb }}</p><p class="project-stack">{{ project.tags.join(' / ') }}</p><details *ngIf="project.points?.length" class="project-details"><summary>{{ ui.projectDetails }} <span aria-hidden="true">+</span></summary><ul><li *ngFor="let point of project.points">{{ point }}</li></ul></details><a *ngIf="project.href" [href]="project.href" target="_blank" rel="noopener noreferrer" class="text-link">{{ ui.viewProject }} ↗</a></div>
+        <div class="project-content"><p>{{ project.blurb }}</p><p class="project-stack">{{ project.tags.join(' / ') }}</p><details *ngIf="project.points?.length" class="project-details"><summary>{{ ui.projectDetails }} <span aria-hidden="true">+</span></summary><ul><li *ngFor="let point of project.points">{{ point }}</li></ul></details><a *ngIf="project.href" [href]="project.href" target="_blank" rel="noopener noreferrer" class="text-link">{{ ui.viewProject }} <span aria-hidden="true">↗</span></a></div>
       </article>
     </div>
-    <details class="other-projects"><summary>{{ ui.otherProjectsHeading }} <span aria-hidden="true">+</span></summary><div class="project-list"><article *ngFor="let project of moreProjects" class="project-row"><div class="project-info"><p class="project-year">{{ project.year }}</p><h3><a *ngIf="project.href; else plainTitle" [href]="project.href" target="_blank" rel="noopener noreferrer">{{ project.title }} ↗</a><ng-template #plainTitle>{{ project.title }}</ng-template></h3></div><div class="project-content"><p>{{ project.blurb }}</p><p class="project-stack">{{ project.tags.join(' / ') }}</p></div></article></div></details>
+    <details class="other-projects"><summary>{{ ui.otherProjectsHeading }} <span aria-hidden="true">+</span></summary><div class="project-list"><article *ngFor="let project of moreProjects" class="project-row"><div class="project-info"><p class="project-year">{{ project.year }}</p><h3><a *ngIf="project.href; else plainTitle" [href]="project.href" target="_blank" rel="noopener noreferrer">{{ project.title }} <span aria-hidden="true">↗</span></a><ng-template #plainTitle>{{ project.title }}</ng-template></h3></div><div class="project-content"><p>{{ project.blurb }}</p><p class="project-stack">{{ project.tags.join(' / ') }}</p></div></article></div></details>
   </section>
 
-  <section class="container section writing-section" aria-labelledby="writing-heading"><div class="section-heading"><h2 id="writing-heading">{{ ui.writingHeading }}</h2><a routerLink="/blogs" class="text-link">{{ ui.allNotes }} ↗</a></div><div class="notes-list"><a *ngFor="let post of posts" [routerLink]="['/blogs', post.slug]" class="note-row"><span class="note-date">{{ formatDate(post.date) }}</span><h3>{{ post.title }}</h3><span class="note-arrow" aria-hidden="true">↗</span></a></div><p *ngIf="!posts.length" class="writing-empty">{{ ui.emptyNotes }} <a routerLink="/blogs" class="text-link">{{ ui.browseWriting }} ↗</a></p></section>
+  <section class="container section writing-section" aria-labelledby="writing-heading"><div class="section-heading"><h2 id="writing-heading">{{ ui.writingHeading }}</h2><a routerLink="/blogs" class="text-link">{{ ui.allNotes }} <span aria-hidden="true">↗</span></a></div><div class="notes-list"><a *ngFor="let post of posts" [routerLink]="['/blogs', post.slug]" class="note-row"><span class="note-date">{{ formatDate(post.date) }}</span><h3>{{ post.title }}</h3><span class="note-arrow" aria-hidden="true">↗</span></a></div><p *ngIf="!posts.length" class="writing-empty">{{ ui.emptyNotes }} <a routerLink="/blogs" class="text-link">{{ ui.browseWriting }} <span aria-hidden="true">↗</span></a></p></section>
 
-  <section id="contact" class="container contact-section" aria-labelledby="contact-heading"><div><h2 id="contact-heading">{{ ui.contactHeading }}</h2><p>{{ ui.contactSub }}</p><a [href]="'mailto:' + site.email" class="contact-email">{{ site.email }} <span aria-hidden="true">↗</span></a></div><div class="contact-socials"><a [href]="site.github" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a [href]="site.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a [href]="site.phoneHref">{{ site.phone }}</a></div></section>
+  <section id="contact" class="container contact-section" aria-labelledby="contact-heading"><div><h2 id="contact-heading">{{ ui.contactHeading }}</h2><p>{{ ui.contactSub }}</p><a [href]="'mailto:' + site.email" class="contact-email">{{ site.email }} <span aria-hidden="true">↗</span></a></div><div class="contact-socials"><a [href]="site.github" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a [href]="site.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a [href]="site.phoneHref">{{ site.phone }}</a></div></section>
 </main>
