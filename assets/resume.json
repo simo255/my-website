@@ -1,14 +1,14 @@
 {
   "profile": {
     "name": "Mohamed Waridi Bennouna",
-    "displayName": "Mohamed Bennouna",
-    "role": "Software Developer",
+    "displayName": "Mohamed Waridi Bennouna",
+    "role": "Scrum Master Intern",
     "focus": "Technical Project Management · AI & Quantitative Systems",
     "location": "Montréal, Québec, Canada",
-    "tagline": "Software Developer at Environment and Climate Change Canada (ECCC) and Master's student in Technology Project Management at Polytechnique Montréal.",
+    "tagline": "Scrum Master Intern at Desjardins and Master's student in Technology Project Management at Polytechnique Montréal.",
     "about": [
-      "Software Developer with experience building and supporting scalable applications across web, backend, cloud, CRM, and data environments.",
-      "At Environment and Climate Change Canada (ECCC), I develop and maintain applications using technologies such as C#, Next.js, Azure, Dynamics 365, Dataverse, SQL, and Microsoft Power Platform. I work across features, integrations, and data layers within ECCC's digital and regulatory platforms."
+      "I’m currently a Scrum Master Intern at Desjardins, with a background in software development across web, backend, cloud, CRM, and data environments.",
+      "Previously, at Environment and Climate Change Canada (ECCC), I developed and maintained applications using C#, Next.js, Azure, Dynamics 365, Dataverse, SQL, and Microsoft Power Platform. I worked across features, integrations, and data layers within ECCC's digital and regulatory platforms."
     ],
     "contact": {
       "email": "00bmed255@gmail.com",
@@ -16,26 +16,31 @@
       "phoneHref": "tel:+15146606470",
       "github": "https://github.com/simo255",
       "linkedin": "https://www.linkedin.com/in/mohamedwb/"
-    }
+    },
+    "employer": "Desjardins"
   },
   "experience": [
+    {
+      "employer": "Desjardins",
+      "role": "Scrum Master Intern",
+      "current": true
+    },
     {
       "employer": "Environnement et Changement climatique Canada",
       "role": "Software Developer",
       "location": "Montréal, Québec, Canada · Hybride",
       "start": "Jun 2024",
-      "end": "Present",
-      "current": true,
+      "current": false,
       "href": "https://www.canada.ca/en/environment-climate-change.html",
       "logo": "assets/images/GoC.png",
       "bullets": [
-        "Develop and maintain software solutions across portal, backend, CRM, integration, and data layers across ECCC's digital and regulatory platforms.",
-        "Build and deliver solutions using C#, Next.js, Drupal, Azure Functions, Dynamics 365, Dataverse, Azure SQL, ADLS, and Microsoft Power Platform.",
-        "Develop and maintain model-driven Power Apps and Power Automate workflows.",
-        "Investigate and resolve defects across distributed services, integrations, and data flows, from root-cause analysis through testing and delivery.",
-        "Collaborate with business analysts and technical teams to translate business requirements into reliable and maintainable software solutions.",
-        "Develop custom JavaScript components to extend platform functionality and improve user experience.",
-        "Support the testing, integration, and delivery of application changes across multiple services and environments."
+        "Developed and maintained software solutions across portal, backend, CRM, integration, and data layers across ECCC's digital and regulatory platforms.",
+        "Built and delivered solutions using C#, Next.js, Drupal, Azure Functions, Dynamics 365, Dataverse, Azure SQL, ADLS, and Microsoft Power Platform.",
+        "Developed and maintained model-driven Power Apps and Power Automate workflows.",
+        "Investigated and resolved defects across distributed services, integrations, and data flows, from root-cause analysis through testing and delivery.",
+        "Collaborated with business analysts and technical teams to translate business requirements into reliable and maintainable software solutions.",
+        "Developed custom JavaScript components to extend platform functionality and improve user experience.",
+        "Supported the testing, integration, and delivery of application changes across multiple services and environments."
       ]
     },
     {
@@ -102,22 +107,38 @@
   ],
   "featuredProjects": [
     {
-      "title": "Algorithmic Trading & Quantitative Research Platform",
+      "title": "Algorithmic Trading & Autonomous Quantitative Platform",
       "year": "Ongoing",
-      "tags": ["Python", "Hyperliquid", "Backtesting", "Risk", "Finance", "Algorithms"],
-      "blurb": "Building a systematic trading research platform focused on quantitative strategy development, backtesting, and evaluation.",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "Hyperliquid",
+        "Angular",
+        "Quantitative Research",
+        "Risk Management",
+        "AI Agents"
+      ],
+      "blurb": "24/7 automated algorithmic trading platform and autonomous quantitative research ecosystem driven by AI agents.",
       "points": [
-        "Develop and evaluate algorithmic trading strategies using historical market data.",
-        "Build research workflows for testing strategy ideas across multiple assets and market regimes.",
-        "Design reusable backtesting and strategy components to support rapid quantitative experimentation.",
-        "Explore systematic approaches to momentum, market behavior, portfolio construction, and risk management.",
-        "Continuously refine strategies through out-of-sample testing, robustness analysis, and iterative research."
+        "Engineered a 24/7 real-time execution engine deployed on VPS with native venue connectivity (Hyperliquid, Extended) via low-latency WebSockets.",
+        "Built an autonomous quantitative research system using agentic AI loops for systematic strategy discovery, signal screening, and out-of-sample (OOS) validation.",
+        "Implemented enterprise-grade risk management: Position Guardian, gross/net leverage controls, autonomous conditional stops, and automated drawdown circuit breakers.",
+        "Delivered a full-stack web terminal (Angular, bilingual FR/EN) with real-time equity sparklines, paper trading sandbox, risk heatmaps, and secure client-side API key management.",
+        "Architected resilient multi-tenant services with asynchronous Python/FastAPI, WebSocket pipelines, hybrid PostgreSQL/SQLite persistence, and Fernet encryption."
       ]
     },
     {
       "title": "Scrabble — Cross-Platform Web & Android Application",
       "year": "2023",
-      "tags": ["TypeScript", "GitLab", "Angular", "Node.js", "Express", "Socket.IO", "Firebase"],
+      "tags": [
+        "TypeScript",
+        "GitLab",
+        "Angular",
+        "Node.js",
+        "Express",
+        "Socket.IO",
+        "Firebase"
+      ],
       "blurb": "Developed a cross-platform Scrabble application as part of a five-person development team.",
       "points": [
         "Designed and implemented a multi-service architecture with an Express backend.",
@@ -129,7 +150,11 @@
     {
       "title": "News-to-Instagram agent workflow",
       "year": "Ongoing",
-      "tags": ["Agents", "Automation", "Python"],
+      "tags": [
+        "Agents",
+        "Automation",
+        "Python"
+      ],
       "blurb": "Agents that collect news from multiple sources, process and format content, and publish Instagram-ready posts without manual intervention. Orchestration, reliability, and scalable delivery."
     }
   ],
@@ -138,20 +163,36 @@
       "title": "betteResume",
       "year": "2024",
       "href": "https://github.com/simo255/betteResume",
-      "tags": ["Chrome extension", "JavaScript", "LaTeX", "AI/LLM"],
+      "tags": [
+        "Chrome extension",
+        "JavaScript",
+        "LaTeX",
+        "AI/LLM"
+      ],
       "blurb": "Chrome extension that reads a job post, calls Mistral or Gemini with your own key, and opens a tailored resume in Overleaf. Keys encrypted locally."
     },
     {
       "title": "Custom Android ROMs & kernels",
       "year": "2019",
       "href": "https://linktr.ee/simo255",
-      "tags": ["C++", "Shell", "Android SDK", "XDA"],
+      "tags": [
+        "C++",
+        "Shell",
+        "Android SDK",
+        "XDA"
+      ],
       "blurb": "Custom ROMs and kernels for Huawei P9 lite and Honor 5C. Performance and customization work used by 1,000+ users on XDA."
     },
     {
       "title": "Sports AI: AFCON data visualization",
       "year": "2024",
-      "tags": ["Python", "Pandas", "Plotly", "FastAPI", "AWS"],
+      "tags": [
+        "Python",
+        "Pandas",
+        "Plotly",
+        "FastAPI",
+        "AWS"
+      ],
       "blurb": "Web application to visualize football statistics using interactive dashboards and data-driven insights."
     }
   ],
@@ -190,23 +231,66 @@
   "skillGroups": [
     {
       "label": "Languages",
-      "items": ["JavaScript", "TypeScript", "Python", "C#", "C++", "Java", "SQL", "HTML/CSS", "Liquid"]
+      "items": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "C#",
+        "C++",
+        "Java",
+        "SQL",
+        "HTML/CSS",
+        "Liquid"
+      ]
     },
     {
       "label": "Frameworks / platforms",
-      "items": ["Drupal", "Next.js", "React", "Angular", "FastAPI", "Node.js", "Azure Functions", "Microsoft Power Platform"]
+      "items": [
+        "Drupal",
+        "Next.js",
+        "React",
+        "Angular",
+        "FastAPI",
+        "Node.js",
+        "Azure Functions",
+        "Microsoft Power Platform"
+      ]
     },
     {
       "label": "Data / cloud",
-      "items": ["Dataverse", "Dynamics 365", "Azure SQL", "ADLS", "Databricks", "AWS", "Docker"]
+      "items": [
+        "Dataverse",
+        "Dynamics 365",
+        "Azure SQL",
+        "ADLS",
+        "Databricks",
+        "AWS",
+        "Docker"
+      ]
     },
     {
       "label": "AI / automation",
-      "items": ["LLM integration", "Agent workflows", "Prompt engineering", "GitHub Copilot", "Codex"]
+      "items": [
+        "LLM integration",
+        "Agent workflows",
+        "Prompt engineering",
+        "GitHub Copilot",
+        "Codex"
+      ]
     },
     {
       "label": "Tools & Methods",
-      "items": ["Azure DevOps", "Git", "GitHub", "GitLab", "Jira", "Confluence", "Fortify", "Figma", "Agile"]
+      "items": [
+        "Azure DevOps",
+        "Git",
+        "GitHub",
+        "GitLab",
+        "Jira",
+        "Confluence",
+        "Fortify",
+        "Figma",
+        "Agile"
+      ]
     }
   ]
 }

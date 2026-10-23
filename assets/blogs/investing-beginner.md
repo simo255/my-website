@@ -5,7 +5,7 @@ coverImage:
 tags: [Finance, Investing, Canada, TFSA, RRSP, CELIAPP]
 ---
 
-# Investing in Canada When You're Young
+## Investing in Canada When You're Young
 
 If you live in Canada and want to grow your money, you have access to some powerful tools. But the problem is that most people don’t learn how to use them. They open a savings account at the bank, they keep some cash there, and that’s it. The rest sits doing nothing. (And the value decreases because of inflation)
 
