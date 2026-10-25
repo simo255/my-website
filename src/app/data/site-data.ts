@@ -285,9 +285,9 @@ export const portfolioData: Record<Language, PortfolioBundle> = {
         title: "cleanyourtv (fork)",
         year: "2026",
         href: "https://github.com/simo255/cleanyourtv",
-        tags: ["Java", "Android TV", "Stremio", "Trakt"],
+        tags: ["Java", "Android TV", "Recommandations", "Stremio", "Trakt"],
         blurb:
-          "Mon fork de Gathin23/cleanyourtv, un launcher d'accueil pour Android TV onn. J'y ai ajouté la reprise Stremio, des recommandations Trakt classées localement, un cache d'affiches et un module d'écran de veille multimédia.",
+          "Mon fork de Gathin23/cleanyourtv, un launcher pour Android TV onn, où j'ai conçu un système de recommandations de films et de séries pour l'écran d'accueil. Il combine les suggestions Trakt, via l'extension officielle de Stremio, et les catalogues publics Cinemeta, écarte les titres déjà vus sur Stremio et classe le reste sur l'appareil selon les genres, acteurs et réalisateurs des titres terminés. Aucun modèle d'IA, rien n'est écrit dans vos comptes.",
       },
       {
         title: "betteResume",
@@ -622,9 +622,9 @@ export const portfolioData: Record<Language, PortfolioBundle> = {
         title: "cleanyourtv (fork)",
         year: "2026",
         href: "https://github.com/simo255/cleanyourtv",
-        tags: ["Java", "Android TV", "Stremio", "Trakt"],
+        tags: ["Java", "Android TV", "Recommendations", "Stremio", "Trakt"],
         blurb:
-          "My fork of Gathin23/cleanyourtv, a home screen launcher for onn Android TV. I added Stremio resume, Trakt recommendations with local ranking, poster caching and a media standby screensaver add-on.",
+          "My fork of Gathin23/cleanyourtv, an onn Android TV launcher, where I built a film and series recommendation system for the home screen. It pulls Trakt picks through Stremio's official add-on plus public Cinemeta catalogs, drops titles you've already watched on Stremio, and ranks the rest on the device by genre, cast and director overlap with what you've finished. No AI model, nothing written to your accounts.",
       },
       {
         title: "betteResume",
