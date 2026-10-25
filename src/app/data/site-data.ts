@@ -237,6 +237,21 @@ export const portfolioData: Record<Language, PortfolioBundle> = {
         ],
       },
       {
+        title: "onn Volume Bridge",
+        year: "2026",
+        href: "https://github.com/simo255/onn-volume-bridge",
+        tags: ["Java", "Android", "Python", "ADB", "Réseau local"],
+        blurb:
+          "Application Android qui relaie les boutons de volume de la télécommande onn vers le volume du téléviseur par le réseau local, quand la configuration intégrée échoue. Aucun compte cloud, aucun root.",
+        points: [
+          "Lit les appuis de volume sur la box par une connexion ADB locale autorisée par le propriétaire, et n'envoie au téléviseur que volume +, volume − et muet.",
+          "Protocoles de téléviseur interchangeables : Samsung Tizen (WebSocket TLS appairé, certificat épinglé) vérifié sur du vrai matériel ; adaptateurs Roku, Sony BRAVIA et UPnP encore expérimentaux.",
+          "Configuration guidée : recherche du téléviseur sur le réseau, réglage automatique de la télécommande et test des boutons, en français et en anglais.",
+          "Jetons et clés chiffrés avec Android Keystore, aucune analytique, sauvegarde cloud désactivée.",
+          "Préversions publiques v0.2.x avec un APK signé sur GitHub.",
+        ],
+      },
+      {
         title: "Scrabble — Application Web & Android multiplateforme",
         year: "2023",
         tags: ["TypeScript", "GitLab", "Angular", "Node.js", "Express", "Socket.IO", "Firebase"],
@@ -258,6 +273,22 @@ export const portfolioData: Record<Language, PortfolioBundle> = {
       },
     ],
     moreProjects: [
+      {
+        title: "multiBot",
+        year: "2026",
+        href: "https://github.com/simo255/multiBot",
+        tags: ["Grok Bot", "Agents IA", "Shell", "CLI"],
+        blurb:
+          "Modèle Grok Bot qui crée d'autres bots. Chaque bot créé confie le vrai travail à un CLI de code : Cursor, grok-build, Antigravity, Codex, Claude Code ou OpenCode.",
+      },
+      {
+        title: "cleanyourtv (fork)",
+        year: "2026",
+        href: "https://github.com/simo255/cleanyourtv",
+        tags: ["Java", "Android TV", "Stremio", "Trakt"],
+        blurb:
+          "Mon fork de Gathin23/cleanyourtv, un launcher d'accueil pour Android TV onn. J'y ai ajouté la reprise Stremio, des recommandations Trakt classées localement, un cache d'affiches et un module d'écran de veille multimédia.",
+      },
       {
         title: "betteResume",
         year: "2024",
@@ -543,6 +574,21 @@ export const portfolioData: Record<Language, PortfolioBundle> = {
         ],
       },
       {
+        title: "onn Volume Bridge",
+        year: "2026",
+        href: "https://github.com/simo255/onn-volume-bridge",
+        tags: ["Java", "Android", "Python", "ADB", "Local network"],
+        blurb:
+          "Android app that sends the onn remote's volume buttons to the TV's own volume over the local network, for when the built-in remote setup fails. No cloud account, no root.",
+        points: [
+          "Reads volume presses on the box through an owner-approved loopback ADB connection and sends only volume up, volume down and mute to the TV.",
+          "Pluggable TV protocols: Samsung Tizen (paired TLS WebSocket, pinned certificate) checked on real hardware; Roku, Sony BRAVIA and UPnP adapters are still experimental.",
+          "Guided setup that finds the TV on the network, configures the remote automatically and tests the buttons, in English and French.",
+          "TV tokens and keys encrypted with Android Keystore, no analytics, cloud backup disabled.",
+          "Public v0.2.x preview releases with a signed APK on GitHub.",
+        ],
+      },
+      {
         title: "Scrabble — Cross-Platform Web & Android Application",
         year: "2023",
         tags: ["TypeScript", "GitLab", "Angular", "Node.js", "Express", "Socket.IO", "Firebase"],
@@ -564,6 +610,22 @@ export const portfolioData: Record<Language, PortfolioBundle> = {
       },
     ],
     moreProjects: [
+      {
+        title: "multiBot",
+        year: "2026",
+        href: "https://github.com/simo255/multiBot",
+        tags: ["Grok Bot", "AI agents", "Shell", "CLI"],
+        blurb:
+          "Grok Bot template that creates other bots. Each new bot hands its real work to a coding CLI: Cursor, grok-build, Antigravity, Codex, Claude Code or OpenCode.",
+      },
+      {
+        title: "cleanyourtv (fork)",
+        year: "2026",
+        href: "https://github.com/simo255/cleanyourtv",
+        tags: ["Java", "Android TV", "Stremio", "Trakt"],
+        blurb:
+          "My fork of Gathin23/cleanyourtv, a home screen launcher for onn Android TV. I added Stremio resume, Trakt recommendations with local ranking, poster caching and a media standby screensaver add-on.",
+      },
       {
         title: "betteResume",
         year: "2024",
